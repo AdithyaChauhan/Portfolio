@@ -12,7 +12,7 @@ function App() {
             <a href="https://github.com/adithyachauhan" className="hover:text-blue-200 transition-colors">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com/adithyachauhan" className="hover:text-blue-200 transition-colors">
+            <a href="https://www.linkedin.com/in/adithyachauhan/" className="hover:text-blue-200 transition-colors">
               <Linkedin size={24} />
             </a>
             <a href="mailto:adithyachauhan4@gmail.com" className="hover:text-blue-200 transition-colors">
