@@ -6,16 +6,16 @@ function App() {
       {/* Hero Section */}
       <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-6 py-24">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Alex Chen</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Adithya Chauhan</h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100">Full Stack Web Developer</p>
           <div className="flex gap-4">
-            <a href="https://github.com" className="hover:text-blue-200 transition-colors">
+            <a href="https://github.com/adithyachauhan" className="hover:text-blue-200 transition-colors">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com" className="hover:text-blue-200 transition-colors">
+            <a href="https://linkedin.com/adithyachauhan" className="hover:text-blue-200 transition-colors">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:alex@example.com" className="hover:text-blue-200 transition-colors">
+            <a href="mailto:adithyachauhan4@gmail.com" className="hover:text-blue-200 transition-colors">
               <Mail size={24} />
             </a>
           </div>
@@ -153,7 +153,7 @@ function App() {
               I'll try my best to get back to you!
             </p>
             <a
-              href="mailto:alex@example.com"
+              href="mailto:adithyachauhan4@gmail.com"
               className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Say Hello
@@ -165,7 +165,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="container mx-auto px-6 text-center">
-          <p>Designed & Built by Alex Chen</p>
+          <p>Designed & Built by Adithya Chauhan</p>
         </div>
       </footer>
     </div>
