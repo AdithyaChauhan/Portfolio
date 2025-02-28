@@ -62,7 +62,7 @@ function App() {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Social Media Platform</h3>
                 <p className="text-gray-600 mb-4">
-                  A full-stack social media app with Next.js, PostgreSQL, and Prisma. Features include authentication,
+                  A full-stack social media app with Next.js, PostgreSQL, Drizzle ORM. Features include authentication,
                   posts, likes, comments, and notifications.
                 </p>
                 <div className="flex gap-2">
