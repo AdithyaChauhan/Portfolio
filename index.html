@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.className+=' js';</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adithya Singh Chauhan — AI Systems & Backend Engineer</title>
+<meta name="description" content="Adithya Singh Chauhan — AI systems and backend engineer in Bengaluru. I build production multi-agent LLM pipelines, data infrastructure, 3D web experiences, and full-stack products, end to end.">
+<meta name="author" content="Adithya Singh Chauhan">
+<meta name="theme-color" content="#0f172a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Adithya Singh Chauhan — AI Systems & Backend Engineer">
+<meta property="og:description" content="Production multi-agent LLM pipelines, data infrastructure, and full-stack products — built end to end.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Adithya Singh Chauhan — AI Systems & Backend Engineer">
+<meta name="twitter:description" content="Production multi-agent LLM pipelines, data infrastructure, and full-stack products — built end to end.">
+<!-- When deployed, add: <meta property="og:url" content="https://your-domain.com"> and <meta property="og:image" content="https://your-domain.com/preview.png"> (1200×630) for a rich link preview card. -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366F1'/><text x='50' y='70' font-size='60' font-family='monospace' font-weight='700' fill='white' text-anchor='middle'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style id="embedded-fonts">@font-face{font-family:'Fraunces';font-weight:400;font-style:normal;font-display:swap;src:url(fonts/fraunces-400-normal.woff2) format('woff2')}@font-face{font-family:'Fraunces';font-weight:400;font-style:italic;font-display:swap;src:url(fonts/fraunces-400-italic.woff2) format('woff2')}@font-face{font-family:'Fraunces';font-weight:600;font-style:normal;font-display:swap;src:url(fonts/fraunces-600-normal.woff2) format('woff2')}@font-face{font-family:'Fraunces';font-weight:600;font-style:italic;font-display:swap;src:url(fonts/fraunces-600-italic.woff2) format('woff2')}@font-face{font-family:'Archivo';font-weight:400;font-style:normal;font-display:swap;src:url(fonts/archivo-400-normal.woff2) format('woff2')}@font-face{font-family:'Archivo';font-weight:500;font-style:normal;font-display:swap;src:url(fonts/archivo-500-normal.woff2) format('woff2')}@font-face{font-family:'Archivo';font-weight:700;font-style:normal;font-display:swap;src:url(fonts/archivo-700-normal.woff2) format('woff2')}@font-face{font-family:'Archivo';font-weight:800;font-style:normal;font-display:swap;src:url(fonts/archivo-800-normal.woff2) format('woff2')}@font-face{font-family:'JetBrains Mono';font-weight:400;font-style:normal;font-display:swap;src:url(fonts/jetbrains-mono-400-normal.woff2) format('woff2')}@font-face{font-family:'JetBrains Mono';font-weight:500;font-style:normal;font-display:swap;src:url(fonts/jetbrains-mono-500-normal.woff2) format('woff2')}@font-face{font-family:'Space Grotesk';font-weight:400;font-style:normal;font-display:swap;src:url(fonts/space-grotesk-400-normal.woff2) format('woff2')}@font-face{font-family:'Space Grotesk';font-weight:500;font-style:normal;font-display:swap;src:url(fonts/space-grotesk-500-normal.woff2) format('woff2')}@font-face{font-family:'Space Grotesk';font-weight:600;font-style:normal;font-display:swap;src:url(fonts/space-grotesk-600-normal.woff2) format('woff2')}@font-face{font-family:'Space Grotesk';font-weight:700;font-style:normal;font-display:swap;src:url(fonts/space-grotesk-700-normal.woff2) format('woff2')}@font-face{font-family:'Outfit';font-weight:300;font-style:normal;font-display:swap;src:url(fonts/outfit-300-normal.woff2) format('woff2')}@font-face{font-family:'Outfit';font-weight:400;font-style:normal;font-display:swap;src:url(fonts/outfit-400-normal.woff2) format('woff2')}@font-face{font-family:'Outfit';font-weight:500;font-style:normal;font-display:swap;src:url(fonts/outfit-500-normal.woff2) format('woff2')}@font-face{font-family:'Outfit';font-weight:600;font-style:normal;font-display:swap;src:url(fonts/outfit-600-normal.woff2) format('woff2')}@font-face{font-family:'Outfit';font-weight:700;font-style:normal;font-display:swap;src:url(fonts/outfit-700-normal.woff2) format('woff2')}@font-face{font-family:'Outfit';font-weight:800;font-style:normal;font-display:swap;src:url(fonts/outfit-800-normal.woff2) format('woff2')}</style>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root,:root[data-theme="dark"]{
+  --bg:#0f172a;--surface:rgba(255,255,255,0.05);--surface2:rgba(255,255,255,0.08);--border:rgba(255,255,255,0.10);
+  --accent:#2a9d8f;--accent-dim:rgba(42,157,143,0.16);--accent-glow:rgba(42,157,143,0.40);
+  --text:#E2E8F0;--text-muted:#94A3B8;--text-dim:#CBD5E1;
+  --green:#2a9d8f;--orange:#7c3aed;--red:#f43f5e;--purple:#7c3aed;
+  --display:'Outfit',sans-serif;--body:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+:root[data-theme="dim"]{
+  --bg:#1e293b;--surface:rgba(255,255,255,0.06);--surface2:rgba(255,255,255,0.10);--border:rgba(255,255,255,0.13);
+  --accent:#2a9d8f;--accent-dim:rgba(42,157,143,0.18);--accent-glow:rgba(42,157,143,0.40);
+  --text:#E8EEF6;--text-muted:#A2B0C2;--text-dim:#D2DBE6;
+  --green:#2a9d8f;--orange:#7c3aed;--red:#f43f5e;--purple:#7c3aed;
+}
+:root[data-theme="light"]{
+  --bg:#F1F5F9;--surface:#FFFFFF;--surface2:#E8EEF5;--border:#CBD5E1;
+  --accent:#0d9488;--accent-dim:rgba(13,148,136,0.12);--accent-glow:rgba(13,148,136,0.26);
+  --text:#0F172A;--text-muted:#64748B;--text-dim:#475569;
+  --green:#0d9488;--orange:#7c3aed;--red:#e11d48;--purple:#7c3aed;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;justify-content:space-between;align-items:center;padding:16px 48px;background:rgba(10,10,15,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:opacity .3s}
+.nav-logo{font-family:var(--display);font-weight:600;font-size:15px;color:var(--text);text-decoration:none;letter-spacing:-.3px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--text-dim);text-decoration:none;font-size:13px;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:white!important;padding:7px 16px;border-radius:6px;font-weight:500!important;font-size:12px!important}
+.nav-links a{position:relative}
+.nav-links a.active:not(.nav-cta){color:var(--text)}
+.nav-links a.active:not(.nav-cta)::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1.5px;background:var(--accent);border-radius:2px}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;max-width:1100px;margin:0 auto;padding:140px 48px 80px;position:relative;z-index:0}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.hero-name{font-family:var(--display);font-size:clamp(48px,7vw,86px);font-weight:700;line-height:1.0;letter-spacing:-3px;color:var(--text);margin-bottom:22px}
+.hero-name span{color:inherit;-webkit-text-fill-color:currentColor;background:none;animation:none}@keyframes nameShift{0%{background-position:0% center}100%{background-position:220% center}}
+.hero-title{font-size:17px;color:var(--text-dim);margin-bottom:20px}
+.hero-desc{font-size:15px;color:var(--text-muted);line-height:1.75;margin-bottom:40px;max-width:500px}
+.hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:36px}
+.btn-primary{background:var(--accent);color:white;padding:12px 28px;border-radius:7px;text-decoration:none;font-weight:500;font-size:14px;transition:transform .15s,box-shadow .15s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px var(--accent-glow)}
+.btn-ghost{color:var(--text-dim);text-decoration:none;font-size:14px;padding:12px 20px;border:1px solid var(--border);border-radius:7px;transition:border-color .2s,color .2s}
+.btn-ghost:hover{border-color:var(--accent);color:var(--text)}
+.hero-links{display:flex;gap:22px}
+.hero-links a{color:var(--text-muted);text-decoration:none;font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}
+.hero-links a:hover{color:var(--accent)}
+
+/* ════════════════════════════ INTERACTIVE LAYER ════════════════════════════ */
+/* scroll progress bar */
+#progress{position:fixed;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple));z-index:400;transform:scaleX(0);transform-origin:0 50%;will-change:transform}
+
+/* hero dot-grid + cursor spotlight */
+#hero > :not(.hero-grid):not(.hero-grid-glow){position:relative;z-index:1}
+.hero-grid,.hero-grid-glow{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-grid{
+  background-image:radial-gradient(circle, rgba(148,163,184,.10) 1px, transparent 1.4px);
+  background-size:26px 26px;
+  -webkit-mask:radial-gradient(125% 85% at 50% 0%, #000 35%, transparent 78%);
+          mask:radial-gradient(125% 85% at 50% 0%, #000 35%, transparent 78%);
+}
+.hero-grid-glow{
+  background-image:radial-gradient(circle, var(--accent) 1.2px, transparent 1.6px);
+  background-size:26px 26px;opacity:0;transition:opacity .45s ease;
+  -webkit-mask:radial-gradient(200px circle at var(--mx,-100px) var(--my,-100px), #000 0%, transparent 65%);
+          mask:radial-gradient(200px circle at var(--mx,-100px) var(--my,-100px), #000 0%, transparent 65%);
+}
+#hero.spot-on .hero-grid-glow{opacity:.6}
+
+/* hero entrance stagger (JS-gated so no-JS shows instantly) */
+.js #hero .hero-eyebrow,.js #hero .hero-name,.js #hero .hero-title,
+.js #hero .hero-desc,.js #hero .hero-actions,.js #hero .hero-links{
+  opacity:0;animation:heroUp .7s cubic-bezier(.2,.7,.2,1) forwards;
+}
+.js #hero .hero-eyebrow{animation-delay:.05s}
+.js #hero .hero-name{animation-delay:.14s}
+.js #hero .hero-title{animation-delay:.24s}
+.js #hero .hero-desc{animation-delay:.32s}
+.js #hero .hero-actions{animation-delay:.40s}
+.js #hero .hero-links{animation-delay:.48s}
+@keyframes heroUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* magnetic buttons */
+.magnetic{transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+
+/* micro hover-lifts */
+.about-card{transition:transform .2s ease,border-color .2s ease}
+.about-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.skill-item{transition:transform .18s ease,color .18s ease,border-color .18s ease}
+.skill-item:hover{transform:translateY(-2px);color:var(--text);border-color:var(--accent)}
+
+/* ── DIVIDER ── */
+.divider{width:100%;height:1px;background:var(--border);max-width:1100px;margin:0 auto}
+
+/* ── SECTIONS ── */
+section{padding:88px 48px;max-width:1100px;margin:0 auto}
+.section-label{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px}
+.section-heading{font-family:var(--display);font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-1px;color:var(--text);margin-bottom:14px;line-height:1.1}
+.section-sub{color:var(--text-muted);font-size:15px;max-width:500px;line-height:1.7;margin-bottom:48px}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about-text p{color:var(--text-dim);line-height:1.75;margin-bottom:16px;font-size:15px}
+.about-text p strong{color:var(--text);font-weight:500}
+.about-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.about-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px}
+.about-card-label{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px}
+.about-card-val{font-size:13px;font-weight:500;color:var(--text-dim);line-height:1.45}
+
+/* ── PROJECT ACCORDION (Salah Eddine–style) ── */
+.projects-list{display:flex;flex-direction:column}
+
+/* hatched section separator (like Salah's diagonal texture dividers) */
+.proj-hatch{
+  width:100%;height:18px;margin:0;
+  background-image:repeating-linear-gradient(
+    -45deg,
+    transparent,transparent 3px,
+    rgba(45,45,78,0.5) 3px,rgba(45,45,78,0.5) 4px
+  );
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+/* each accordion row */
+.pacc{
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+.pacc:first-child{ border-top:1px solid var(--border); }
+
+/* collapsed trigger row */
+.pacc-row{
+  display:flex;align-items:center;gap:16px;
+  padding:20px 0;
+  cursor:pointer;
+  user-select:none;
+  transition:background .15s;
+  position:relative;overflow:hidden;
+}
+.pacc-row > *{position:relative;z-index:1}
+.pacc-row::before{
+  content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(150px circle at var(--rx,-200px) var(--ry,-200px), color-mix(in srgb, var(--pacc-accent) 16%, transparent), transparent 60%);
+  opacity:0;transition:opacity .3s ease;
+}
+.pacc-row:hover::before{opacity:1}
+.pacc-row:hover .pacc-name{ color:var(--text); }
+
+/* icon circle */
+.pacc-icon{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:12px;font-weight:600;
+  flex-shrink:0;
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--pacc-accent,var(--accent));
+  border-color:var(--pacc-accent,var(--border));
+  transition:background .2s,color .2s;
+}
+.pacc.open .pacc-icon{
+  background:var(--pacc-accent,var(--accent));
+  color:#fff;
+  border-color:var(--pacc-accent,var(--accent));
+}
+
+/* name + year */
+.pacc-meta{ flex:1;min-width:0; }
+.pacc-name{
+  font-family:var(--display);font-size:17px;font-weight:600;
+  color:var(--text-dim);letter-spacing:-.3px;
+  transition:color .2s;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.pacc-year{
+  font-family:var(--mono);font-size:10px;color:var(--text-muted);
+  letter-spacing:.5px;margin-top:2px;
+}
+
+/* right-side controls */
+.pacc-controls{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.pacc-ext{
+  font-family:var(--mono);font-size:11px;color:var(--text-muted);
+  text-decoration:none;letter-spacing:.5px;
+  transition:color .2s;
+  display:flex;align-items:center;gap:4px;
+}
+.pacc-ext:hover{color:var(--pacc-accent,var(--accent))}
+.pacc-chevron{
+  width:28px;height:28px;border-radius:50%;
+  border:1px solid var(--border);background:var(--surface);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--text-muted);font-size:13px;
+  transition:transform .3s ease,border-color .2s,color .2s;
+}
+.pacc.open .pacc-chevron{
+  transform:rotate(180deg);
+  border-color:var(--pacc-accent,var(--accent));
+  color:var(--pacc-accent,var(--accent));
+}
+
+/* expandable body */
+.pacc-body{
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows .38s ease;
+}
+.pacc.open .pacc-body{ grid-template-rows:1fr; }
+.pacc-body-inner{ overflow:hidden; }
+
+/* visual preview panel */
+.pacc-preview{
+  border-radius:12px;overflow:hidden;
+  background:var(--surface);
+  border:1px solid var(--border);
+  margin-bottom:20px;
+  position:relative;
+}
+.pacc-preview-bg{
+  width:100%;height:220px;
+  background:linear-gradient(135deg,var(--pacc-accent,var(--accent)) 0%,transparent 70%);
+  opacity:.08;
+  position:absolute;inset:0;
+}
+.pacc-preview-content{
+  position:relative;padding:28px 32px;
+  display:flex;align-items:flex-start;gap:32px;
+  flex-wrap:wrap;
+}
+.pacc-preview-left{ flex:1;min-width:220px; }
+.pacc-preview-badge{
+  font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--pacc-accent,var(--accent));margin-bottom:10px;
+}
+.pacc-preview-desc{
+  font-size:14px;color:var(--text-dim);line-height:1.72;margin-bottom:18px;
+}
+.pacc-preview-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.pacc-preview-tag{
+  font-family:var(--mono);font-size:10px;color:var(--text-muted);
+  background:var(--surface2);padding:3px 9px;border-radius:4px;border:1px solid var(--border);
+}
+.pacc-preview-actions{display:flex;gap:10px;flex-wrap:wrap}
+.pacc-btn-case{
+  background:var(--pacc-accent,var(--accent));color:#fff;
+  font-family:var(--mono);font-size:11px;letter-spacing:.5px;
+  padding:8px 18px;border-radius:6px;border:none;cursor:pointer;
+  transition:opacity .15s,transform .15s;
+}
+.pacc-btn-case:hover{opacity:.85;transform:translateY(-1px)}
+.pacc-btn-link{
+  color:var(--text-muted);text-decoration:none;
+  font-family:var(--mono);font-size:11px;letter-spacing:.5px;
+  padding:8px 18px;border-radius:6px;border:1px solid var(--border);
+  transition:border-color .2s,color .2s;
+}
+.pacc-btn-link:hover{border-color:var(--pacc-accent,var(--accent));color:var(--text)}
+
+/* mini arch diagram in preview */
+.pacc-preview-right{flex:1;min-width:200px;max-width:380px}
+.pacc-arch{
+  background:var(--surface2);border:1px solid var(--border);border-radius:8px;
+  padding:16px;display:flex;flex-direction:column;gap:8px;
+}
+.pacc-arch-title{font-family:var(--mono);font-size:9px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.pacc-arch-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.pacc-arch-node{
+  font-family:var(--mono);font-size:10px;
+  color:var(--text-dim);
+  background:var(--surface);border:1px solid var(--border);
+  padding:4px 10px;border-radius:14px;
+  white-space:nowrap;
+}
+.pacc-arch-node.hi{
+  color:var(--pacc-accent,var(--accent));
+  border-color:var(--pacc-accent,var(--accent));
+}
+.pacc-arch-sep{color:var(--text-muted);font-size:11px}
+
+/* media banner (video for product demos, cover for systems) */
+.pacc-media{
+  position:relative;z-index:1;width:100%;
+  aspect-ratio:96/44;max-height:430px;
+  overflow:hidden;background:#0f172a;
+  border-bottom:1px solid var(--border);
+}
+.pacc-video{width:100%;height:100%;object-fit:cover;display:block}
+.pacc-media-tag{
+  position:absolute;top:12px;left:12px;z-index:2;
+  font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--text);background:rgba(10,10,15,.62);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.12);padding:4px 10px;border-radius:5px;
+}
+/* system cover (backend / data projects with no UI demo) */
+.pacc-cover{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+  background:
+    radial-gradient(circle at 50% 34%, color-mix(in srgb, var(--pacc-accent) 20%, transparent), transparent 64%),
+    var(--surface2);
+}
+.pacc-cover-glyph{color:var(--pacc-accent);line-height:0}
+.pacc-cover-glyph svg{display:block}
+.pacc-cover-glyph circle{fill:var(--surface);stroke:var(--pacc-accent)}
+.pacc-cover-glyph line{stroke:var(--pacc-accent)}
+.pacc-cover-glyph rect{stroke:var(--pacc-accent)}
+.pacc-cover-stats{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0 18px}
+.pacc-cover-stats span{
+  font-family:var(--mono);font-size:11px;color:var(--text-dim);
+  background:color-mix(in srgb, var(--pacc-accent) 12%, var(--surface));
+  border:1px solid color-mix(in srgb, var(--pacc-accent) 35%, var(--border));
+  padding:5px 12px;border-radius:20px;
+}
+
+/* bottom padding inside expanded */
+.pacc-body-inner > *:last-child{ margin-bottom:24px }
+
+/* ── OVERLAY (case study expand) ── */
+#overlay{
+  position:fixed;inset:0;z-index:500;
+  background:var(--bg);
+  overflow-y:auto;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s ease,background-color .35s ease;
+}
+#overlay.open{opacity:1;pointer-events:all}
+.overlay-inner{max-width:900px;margin:0 auto;padding:0 48px 120px}
+
+/* close button */
+.overlay-close{
+  position:fixed;top:20px;right:28px;z-index:600;
+  background:var(--surface);border:1px solid var(--border);color:var(--text-dim);
+  font-family:var(--mono);font-size:12px;padding:8px 16px;border-radius:6px;
+  cursor:pointer;letter-spacing:.5px;
+  transition:border-color .2s,color .2s,background-color .35s ease;
+}
+.overlay-close:hover{border-color:var(--accent);color:var(--text)}
+
+/* overlay hero */
+.ov-hero{padding:100px 0 60px;border-bottom:1px solid var(--border)}
+.ov-eyebrow{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.ov-title{font-family:var(--display);font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-2px;line-height:1.05;color:var(--text);margin-bottom:20px}
+.ov-subtitle{font-size:16px;color:var(--text-dim);line-height:1.72;margin-bottom:40px;max-width:620px}
+.ov-stack{display:flex;flex-wrap:wrap;gap:8px}
+.ov-tag{font-family:var(--mono);font-size:11px;color:var(--text-dim);background:var(--surface);border:1px solid var(--border);padding:5px 12px;border-radius:5px}
+
+/* overlay sections */
+.ov-section{padding:64px 0;border-bottom:1px solid var(--border)}
+.ov-section:last-child{border-bottom:none}
+.ov-section-label{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.ov-section-title{font-family:var(--display);font-size:clamp(22px,3vw,32px);font-weight:700;letter-spacing:-.8px;color:var(--text);margin-bottom:14px;line-height:1.1}
+.ov-section-body{color:var(--text-dim);font-size:15px;line-height:1.75;margin-bottom:36px;max-width:640px}
+
+/* diagram box */
+.diagram-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:36px;margin:32px 0;overflow:hidden}
+.diagram-box svg{width:100%;height:auto;display:block}
+.diagram-caption{font-family:var(--mono);font-size:11px;color:var(--text-muted);text-align:center;margin-top:14px}
+
+/* feature grid */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.feat-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px}
+.feat-label{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.feat-title{font-family:var(--display);font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px}
+.feat-body{font-size:13px;color:var(--text-muted);line-height:1.6}
+.feat-body code{font-family:var(--mono);font-size:11px;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--text-dim)}
+
+/* callout */
+.callout{background:var(--accent-dim);border:1px solid rgba(42,157,143,.25);border-radius:10px;padding:18px 22px;margin:28px 0}
+.callout p{font-size:14px;color:var(--text-dim);line-height:1.65}
+.callout p strong{color:var(--text)}
+.callout code{font-family:var(--mono);font-size:11px;background:rgba(0,0,0,.3);padding:1px 5px;border-radius:3px}
+
+/* flow nodes */
+.flow-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:24px 0}
+.flow-node{font-family:var(--mono);font-size:11px;color:var(--text-dim);background:var(--surface2);border:1px solid var(--border);padding:6px 14px;border-radius:20px}
+.flow-arrow{color:var(--accent);font-size:14px;flex-shrink:0}
+
+/* schema model */
+.schema-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+.schema-model{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px}
+.schema-name{font-family:var(--display);font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px}
+.schema-fields{list-style:none;display:flex;flex-direction:column;gap:4px}
+.schema-fields li{font-family:var(--mono);font-size:10px;color:var(--text-muted)}
+.schema-fields li span{color:var(--text-dim)}
+
+/* pipeline */
+.pipeline{display:flex;gap:0;margin:28px 0;flex-wrap:wrap}
+.pipe-stage{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 18px;flex:1;min-width:100px;text-align:center;position:relative}
+.pipe-stage:not(:last-child)::after{content:'→';position:absolute;right:-14px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:14px;z-index:1}
+.pipe-num{font-family:var(--mono);font-size:9px;color:var(--accent);margin-bottom:5px}
+.pipe-name{font-size:12px;font-weight:500;color:var(--text);margin-bottom:3px}
+.pipe-detail{font-family:var(--mono);font-size:9px;color:var(--text-muted)}
+
+/* reveal animation */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.08s}.rd2{transition-delay:.16s}.rd3{transition-delay:.24s}
+
+/* section scroll reveal (progressive enhancement — only active when JS is on) */
+.js .sect-reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.js .sect-reveal.in{opacity:1;transform:none}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.skill-group{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px}
+.skill-group-label{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.skill-items{display:flex;flex-wrap:wrap;gap:7px}
+.skill-item{font-size:13px;color:var(--text-dim);background:var(--surface2);padding:5px 11px;border-radius:5px;border:1px solid var(--border)}
+
+/* EXPERIENCE */
+.exp-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:34px 38px;position:relative;overflow:hidden}
+.exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap;gap:12px}
+.exp-role{font-family:var(--display);font-size:19px;font-weight:600;color:var(--text);letter-spacing:-.4px}
+.exp-company{font-size:14px;color:var(--accent);font-weight:500;margin-bottom:4px}
+.exp-period{font-family:var(--mono);font-size:11px;color:var(--text-muted);background:var(--surface2);padding:4px 10px;border-radius:4px;white-space:nowrap}
+.exp-desc{color:var(--text-dim);font-size:14px;line-height:1.7;margin:14px 0}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:9px;margin-top:14px}
+.exp-bullets li{font-size:14px;color:var(--text-dim);line-height:1.65;padding-left:18px;position:relative}
+.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:11px}
+.exp-bullets li strong{color:var(--text);font-weight:500}
+.exp-tech{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}
+.exp-tech span{font-family:var(--mono);font-size:11px;color:var(--text-muted);background:var(--surface2);padding:4px 9px;border-radius:4px}
+
+/* CONTACT */
+#contact{padding-bottom:120px}
+.contact-inner{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:60px;text-align:center;position:relative;overflow:hidden}
+.contact-inner::after{content:'';position:absolute;bottom:-60px;right:-60px;width:200px;height:200px;background:var(--accent);border-radius:50%;opacity:.06;filter:blur(40px)}
+.contact-heading{font-family:var(--display);font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-1px;color:var(--text);margin-bottom:14px}
+.contact-sub{color:var(--text-muted);font-size:15px;margin-bottom:36px;max-width:380px;margin-left:auto;margin-right:auto;line-height:1.65}
+.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.contact-link{display:flex;align-items:center;gap:8px;color:var(--text-dim);text-decoration:none;font-size:14px;padding:11px 20px;border:1px solid var(--border);border-radius:8px;transition:border-color .2s,color .2s}
+.contact-link:hover{border-color:var(--accent);color:var(--text)}
+.contact-email{background:var(--accent);color:white;border-color:var(--accent)}
+.contact-email:hover{opacity:.88;color:white;border-color:var(--accent)}
+
+footer{border-top:1px solid var(--border);padding:26px 48px;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
+footer span{font-family:var(--mono);font-size:11px;color:var(--text-muted)}
+
+@media(max-width:768px){
+  nav{padding:14px 20px}.nav-links{display:none}
+  #hero{padding:110px 20px 60px}
+  section{padding:56px 20px}
+  .about-grid{grid-template-columns:1fr;gap:32px}
+  .about-cards{grid-template-columns:1fr 1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .schema-grid{grid-template-columns:1fr 1fr}
+  .pipeline{flex-direction:column}
+  .pipe-stage:not(:last-child)::after{content:'↓';right:50%;bottom:-14px;top:auto;transform:translateX(50%)}
+  .overlay-inner{padding:0 20px 80px}
+  footer{padding:18px 20px;flex-direction:column;gap:8px;text-align:center}
+}
+@media(max-width:768px){
+  .pacc-preview-content{flex-direction:column;gap:20px}
+  .pacc-preview-right{max-width:100%;min-width:0}
+  .pacc-name{font-size:14px}
+  .pacc-controls .pacc-ext{display:none}
+  .pacc-controls .pacc-ext:last-of-type{display:flex}
+  .pacc-media{aspect-ratio:auto;height:185px;max-height:none}
+  .pacc-cover{gap:14px}
+  .pacc-cover-glyph svg{height:60px;width:auto}
+}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.pacc-body{transition:none}.js .sect-reveal{opacity:1;transform:none}.js #hero .hero-eyebrow,.js #hero .hero-name,.js #hero .hero-title,.js #hero .hero-desc,.js #hero .hero-actions,.js #hero .hero-links{animation:none;opacity:1}.hero-name span{animation:none}.hero-grid-glow{display:none}.magnetic{transition:none}#progress{transition:none}}
+</style>
+<style id="dossier-reskin">
+body{transition:background .4s ease,color .4s ease;padding-bottom:36px}
+.hero-eyebrow{background:none!important;border:none!important;padding:0!important;box-shadow:none!important}
+.hero-eyebrow::before{display:none!important}
+.nav-toggle-li{display:flex;align-items:center}
+.nav-toggle{display:inline-flex;border:1px solid var(--border);border-radius:30px;overflow:hidden}
+.nav-toggle button{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;background:transparent;color:var(--text-muted);border:0;padding:6px 10px;cursor:pointer;transition:background .2s,color .2s}
+.nav-toggle button.on{background:var(--accent);color:#0f172a}
+.hud-bar{position:fixed;left:0;right:0;bottom:0;z-index:55;height:32px;display:flex;justify-content:space-between;align-items:center;padding:0 18px;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--border);font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--text-muted);pointer-events:none}
+.hud-bar .l{display:flex;gap:16px;align-items:center}
+.hud-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;animation:hudPulse 2.4s infinite}
+@keyframes hudPulse{0%,100%{opacity:1}50%{opacity:.3}}
+@media(max-width:760px){.hud-bar .tick{display:none}}
+
+/* light-mode legibility: highlighted architecture nodes use theme accent */
+:root[data-theme="light"] .pacc-arch-node.hi{color:var(--accent);border-color:var(--accent)}
+:root[data-theme="light"] .pacc-ext:hover{color:var(--accent)}
+
+/* glass-morphism: frost only the large panels; translucent surfaces show glass in dark/dim, opaque ones stay clean in light */
+nav,.about-card,.pacc-preview,.pacc-arch,.diagram-box,.feat-card,.schema-model,.skill-group,.exp-card,.contact-inner,.hud-bar{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+
+/* gravity-well hero canvas */
+body{position:relative}
+#space-bg{position:absolute;top:0;left:0;width:100%;height:100vh;z-index:0;pointer-events:none;display:block}
+#hero{z-index:1}
+:root[data-theme="light"] #space-bg{display:none}
+</style>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+
+<nav>
+  <a href="#hero" class="nav-logo">Adithya Singh Chauhan</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+  <li class="nav-toggle-li"><div class="nav-toggle" id="themeToggle"><button data-mode="light">Light</button><button data-mode="dim">Dim</button><button data-mode="dark" class="on">Dark</button></div></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════ HERO -->
+<canvas id="space-bg" aria-hidden="true"></canvas>
+<div id="hero">
+  <div class="hero-eyebrow">Open to — backend / ML-systems roles · Bengaluru</div>
+  <h1 class="hero-name">Adithya<br><span>Singh Chauhan</span></h1>
+  <p class="hero-title">AI Systems · Backend Platforms · DataOps</p>
+  <p class="hero-desc">I build production-grade systems — multi-agent LLM pipelines, 3D web experiences, data infrastructure, and full-stack products. End to end.</p>
+  <div class="hero-actions">
+    <a href="#projects" class="btn-primary magnetic">View my work</a>
+    <a href="Adithya_Singh_Chauhan_Resume.pdf" class="btn-ghost magnetic" download>Resume</a>
+  </div>
+  <div class="hero-links">
+    <a href="https://github.com/AdithyaChauhan" target="_blank">GitHub ↗</a>
+    <a href="https://linkedin.com/in/AdithyaChauhan" target="_blank">LinkedIn ↗</a>
+    <a href="mailto:adithyachauhan4@gmail.com">Email ↗</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════ ABOUT -->
+<section id="about" class="sect-reveal">
+  <div class="section-label">About</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2 class="section-heading">I build things<br>end to end.</h2>
+      <p>I'm a <strong>2024 ECE graduate from NIT Srinagar</strong>, based in Bengaluru. My work spans AI application engineering, backend systems, data infrastructure, and frontend — I'm most comfortable when I own the full stack.</p>
+      <p>At <strong>Sigmoid Analytics</strong>, I completed a six-month structured training program across the modern data and DevOps stack, then built a production multi-agent LLM system from scratch in 24 days. Before that, I shipped three full-stack personal projects spanning a real-time social graph, a Stripe-integrated e-commerce platform, and a 3D configurator with physics simulation.</p>
+      <p>I care about systems that are <strong>observable, honest about their limits</strong>, and maintainable by people who weren't there when they were built.</p>
+    </div>
+    <div class="about-cards">
+      <div class="about-card"><div class="about-card-label">Languages</div><div class="about-card-val">Python · TypeScript · JavaScript · SQL</div></div>
+      <div class="about-card"><div class="about-card-label">AI / LLM</div><div class="about-card-val">LangGraph · LangChain · GPT-4o-mini · DeepEval</div></div>
+      <div class="about-card"><div class="about-card-label">Data</div><div class="about-card-val">Databricks · PySpark · Delta Lake · ADF</div></div>
+      <div class="about-card"><div class="about-card-label">Infrastructure</div><div class="about-card-val">Docker · K8s · Helm · GitHub Actions</div></div>
+      <div class="about-card"><div class="about-card-label">Backend</div><div class="about-card-val">FastAPI · Express · PostgreSQL · Prisma</div></div>
+      <div class="about-card"><div class="about-card-label">Frontend & 3D</div><div class="about-card-val">Next.js · Three.js · GSAP · React Three Fiber</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════ PROJECTS -->
+<section id="projects" class="sect-reveal">
+  <div class="section-label">Projects</div>
+  <h2 class="section-heading">Things I've shipped.</h2>
+  <p class="section-sub">Select a project to see the architecture and technical breakdown.</p>
+
+  <div class="proj-hatch"></div>
+
+  <div class="projects-list">
+
+    <!-- 1. MULTI-AGENT -->
+    <div class="pacc" style="--pacc-accent:#2a9d8f" id="pacc-multiagent">
+      <div class="pacc-row" onclick="toggleAcc('multiagent')">
+        <div class="pacc-icon">MA</div>
+        <div class="pacc-meta">
+          <div class="pacc-name">Multi-Agent Customer Service System</div>
+          <div class="pacc-year">2026 · Capstone · Sigmoid Analytics</div>
+        </div>
+        <div class="pacc-controls">
+          <a class="pacc-ext" href="https://github.com/AdithyaChauhan" target="_blank" onclick="event.stopPropagation()">GitHub ↗</a>
+          <div class="pacc-chevron">↓</div>
+        </div>
+      </div>
+      <div class="pacc-body">
+        <div class="pacc-body-inner">
+          <div class="pacc-preview">
+            <div class="pacc-preview-bg"></div><div class="pacc-media pacc-cover"><span class="pacc-media-tag">System design</span><div class="pacc-cover-glyph"><svg width="132" height="84" viewBox="0 0 132 84" aria-hidden="true"><line x1="66" y1="18" x2="28" y2="64" stroke-width="1.4" opacity=".45"/><line x1="66" y1="18" x2="66" y2="64" stroke-width="1.4" opacity=".45"/><line x1="66" y1="18" x2="104" y2="64" stroke-width="1.4" opacity=".45"/><circle cx="66" cy="18" r="11" stroke-width="2"/><circle cx="28" cy="64" r="9" stroke-width="1.6"/><circle cx="66" cy="64" r="9" stroke-width="1.6"/><circle cx="104" cy="64" r="9" stroke-width="1.6"/></svg></div><div class="pacc-cover-stats"><span>3 specialist agents</span><span>7 LangGraph state graphs</span><span>Built in 24 days</span></div></div>
+            <div class="pacc-preview-content">
+              <div class="pacc-preview-left">
+                <div class="pacc-preview-badge">Production LLM · FastAPI · LangGraph</div>
+                <p class="pacc-preview-desc">Intent router dispatching to 3 specialist agents — product search, order tracking, support escalation. Deterministic safety gates keep auth and cancellation logic in Python, never in the LLM. 5-step query relaxation, tier-based ranker, full observability. Built in 24 days.</p>
+                <div class="pacc-preview-tags">
+                  <span class="pacc-preview-tag">FastAPI</span><span class="pacc-preview-tag">LangGraph</span>
+                  <span class="pacc-preview-tag">GPT-4o-mini</span><span class="pacc-preview-tag">PostgreSQL</span>
+                  <span class="pacc-preview-tag">Docker</span><span class="pacc-preview-tag">Helm</span>
+                  <span class="pacc-preview-tag">Prometheus</span><span class="pacc-preview-tag">LangSmith</span>
+                </div>
+                <div class="pacc-preview-actions">
+                  <button class="pacc-btn-case" onclick="openCase('multiagent')">Explore architecture →</button>
+                  <a class="pacc-btn-link" href="https://github.com/AdithyaChauhan" target="_blank">GitHub ↗</a>
+                </div>
+              </div>
+              <div class="pacc-preview-right">
+                <div class="pacc-arch">
+                  <div class="pacc-arch-title">Request flow</div>
+                  <div class="pacc-arch-flow">
+                    <span class="pacc-arch-node">User</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node hi">Safety Gate</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node hi">LLM Router</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node hi">Product</span>
+                    <span class="pacc-arch-sep">·</span>
+                    <span class="pacc-arch-node hi">Order</span>
+                    <span class="pacc-arch-sep">·</span>
+                    <span class="pacc-arch-node hi">Support</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node">PostgreSQL</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node">Prometheus</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node">Grafana</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node">GitHub Actions</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node">Helm / K8s</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. SOCIAL MEDIA -->
+    <div class="pacc" style="--pacc-accent:#10B981" id="pacc-social">
+      <div class="pacc-row" onclick="toggleAcc('social')">
+        <div class="pacc-icon">SM</div>
+        <div class="pacc-meta">
+          <div class="pacc-name">Social Media Platform</div>
+          <div class="pacc-year">2024 · Full Stack · Next.js 14</div>
+        </div>
+        <div class="pacc-controls">
+          <a class="pacc-ext" href="https://next-js-social-media-silk.vercel.app/" target="_blank" onclick="event.stopPropagation()">Live ↗</a>
+          <a class="pacc-ext" href="https://github.com/AdithyaChauhan/next-js-SocialMedia" target="_blank" onclick="event.stopPropagation()">GitHub ↗</a>
+          <div class="pacc-chevron">↓</div>
+        </div>
+      </div>
+      <div class="pacc-body">
+        <div class="pacc-body-inner">
+          <div class="pacc-preview">
+            <div class="pacc-preview-bg"></div><div class="pacc-media"><span class="pacc-media-tag">▶ Live demo</span><video class="pacc-video" muted loop playsinline preload="metadata" poster="media/poster-1.jpg"><source src="media/video-1.mp4" type="video/mp4"></video></div>
+            <div class="pacc-preview-content">
+              <div class="pacc-preview-left">
+                <div class="pacc-preview-badge">Full Stack · Next.js · Prisma · Neon</div>
+                <p class="pacc-preview-desc">Full social graph with six Prisma models, composite indexes, and a bidirectional follow system. Real-time notifications (LIKE / COMMENT / FOLLOW) via Server Actions. Clerk auth, UploadThing media, Radix UI components, dark/light theme.</p>
+                <div class="pacc-preview-tags">
+                  <span class="pacc-preview-tag">Next.js 14</span><span class="pacc-preview-tag">Prisma</span>
+                  <span class="pacc-preview-tag">PostgreSQL</span><span class="pacc-preview-tag">Clerk</span>
+                  <span class="pacc-preview-tag">UploadThing</span><span class="pacc-preview-tag">TypeScript</span>
+                </div>
+                <div class="pacc-preview-actions">
+                  <button class="pacc-btn-case" onclick="openCase('social')">Explore architecture →</button>
+                  <a class="pacc-btn-link" href="https://next-js-social-media-silk.vercel.app/" target="_blank">Live Demo ↗</a>
+                  <a class="pacc-btn-link" href="https://github.com/AdithyaChauhan/next-js-SocialMedia" target="_blank">GitHub ↗</a>
+                </div>
+              </div>
+              <div class="pacc-preview-right">
+                <div class="pacc-arch">
+                  <div class="pacc-arch-title">Data model</div>
+                  <div class="pacc-arch-flow">
+                    <span class="pacc-arch-node hi">User</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node">Post</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node">Comment</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node">Like</span>
+                    <span class="pacc-arch-sep">·</span>
+                    <span class="pacc-arch-node hi">Follow</span>
+                    <span class="pacc-arch-sep">·</span>
+                    <span class="pacc-arch-node">Notification</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node">Server Actions</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node">Neon DB</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. ECOMMERCE -->
+    <div class="pacc" style="--pacc-accent:#a78bfa" id="pacc-ecommerce">
+      <div class="pacc-row" onclick="toggleAcc('ecommerce')">
+        <div class="pacc-icon">EC</div>
+        <div class="pacc-meta">
+          <div class="pacc-name">E-Commerce Platform</div>
+          <div class="pacc-year">2024 · Full Stack · MERN</div>
+        </div>
+        <div class="pacc-controls">
+          <a class="pacc-ext" href="https://github.com/AdithyaChauhan/ecommerceapp" target="_blank" onclick="event.stopPropagation()">GitHub ↗</a>
+          <div class="pacc-chevron">↓</div>
+        </div>
+      </div>
+      <div class="pacc-body">
+        <div class="pacc-body-inner">
+          <div class="pacc-preview">
+            <div class="pacc-preview-bg"></div><div class="pacc-media"><span class="pacc-media-tag">▶ Live demo</span><video class="pacc-video" muted loop playsinline preload="metadata" poster="media/poster-2.jpg"><source src="media/video-2.mp4" type="video/mp4"></video></div>
+            <div class="pacc-preview-content">
+              <div class="pacc-preview-left">
+                <div class="pacc-preview-badge">Three-App System · Stripe · MERN</div>
+                <p class="pacc-preview-desc">Customer storefront, admin dashboard, and Express backend as three separate apps with distinct JWT auth layers. Stripe + COD payment flows with webhook verification. Cloudinary image hosting, full order lifecycle management.</p>
+                <div class="pacc-preview-tags">
+                  <span class="pacc-preview-tag">React</span><span class="pacc-preview-tag">Node.js</span>
+                  <span class="pacc-preview-tag">Express</span><span class="pacc-preview-tag">MongoDB</span>
+                  <span class="pacc-preview-tag">Stripe</span><span class="pacc-preview-tag">Cloudinary</span>
+                  <span class="pacc-preview-tag">JWT</span>
+                </div>
+                <div class="pacc-preview-actions">
+                  <button class="pacc-btn-case" onclick="openCase('ecommerce')">Explore architecture →</button>
+                  <a class="pacc-btn-link" href="https://github.com/AdithyaChauhan/ecommerceapp" target="_blank">GitHub ↗</a>
+                </div>
+              </div>
+              <div class="pacc-preview-right">
+                <div class="pacc-arch">
+                  <div class="pacc-arch-title">System split</div>
+                  <div class="pacc-arch-flow">
+                    <span class="pacc-arch-node hi">Storefront</span>
+                    <span class="pacc-arch-sep">·</span>
+                    <span class="pacc-arch-node hi">Admin</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-sep">↓</span>
+                    <span class="pacc-arch-node">Express API</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node">MongoDB</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node">Stripe</span>
+                    <span class="pacc-arch-sep">+</span>
+                    <span class="pacc-arch-node hi">Webhook</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node">Orders</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SKATEBOARD -->
+    <div class="pacc" style="--pacc-accent:#7c3aed" id="pacc-skateboard">
+      <div class="pacc-row" onclick="toggleAcc('skateboard')">
+        <div class="pacc-icon">3D</div>
+        <div class="pacc-meta">
+          <div class="pacc-name">Skateboard Suburbia</div>
+          <div class="pacc-year">2024 · 3D Web · Next.js 15 · CMS</div>
+        </div>
+        <div class="pacc-controls">
+          <a class="pacc-ext" href="https://merry-centaur-393dd7.netlify.app/" target="_blank" onclick="event.stopPropagation()">Live ↗</a>
+          <a class="pacc-ext" href="https://github.com/AdithyaChauhan/slumurban" target="_blank" onclick="event.stopPropagation()">GitHub ↗</a>
+          <div class="pacc-chevron">↓</div>
+        </div>
+      </div>
+      <div class="pacc-body">
+        <div class="pacc-body-inner">
+          <div class="pacc-preview">
+            <div class="pacc-preview-bg"></div><div class="pacc-media"><span class="pacc-media-tag">▶ Live demo</span><video class="pacc-video" muted loop playsinline preload="metadata" poster="media/poster-3.jpg"><source src="media/video-3.mp4" type="video/mp4"></video></div>
+            <div class="pacc-preview-content">
+              <div class="pacc-preview-left">
+                <div class="pacc-preview-badge">3D Configurator · Three.js · GSAP · Prismic</div>
+                <p class="pacc-preview-desc">Real-time 3D skateboard configurator with deck, wheel, truck, and bolt customization — all synced to URL params for shareable builds. HDR environment lighting, Matter.js physics simulation, GSAP scroll animations, Prismic CMS with 5 custom content types.</p>
+                <div class="pacc-preview-tags">
+                  <span class="pacc-preview-tag">Next.js 15</span><span class="pacc-preview-tag">Three.js</span>
+                  <span class="pacc-preview-tag">React Three Fiber</span><span class="pacc-preview-tag">GSAP</span>
+                  <span class="pacc-preview-tag">Matter.js</span><span class="pacc-preview-tag">Prismic CMS</span>
+                </div>
+                <div class="pacc-preview-actions">
+                  <button class="pacc-btn-case" onclick="openCase('skateboard')">Explore architecture →</button>
+                  <a class="pacc-btn-link" href="https://merry-centaur-393dd7.netlify.app/" target="_blank">Live Demo ↗</a>
+                </div>
+              </div>
+              <div class="pacc-preview-right">
+                <div class="pacc-arch">
+                  <div class="pacc-arch-title">Rendering pipeline</div>
+                  <div class="pacc-arch-flow">
+                    <span class="pacc-arch-node">Prismic CMS</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node hi">Next.js 15</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node hi">R3F Scene</span>
+                    <span class="pacc-arch-sep">+</span>
+                    <span class="pacc-arch-node">HDR Lighting</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node">GSAP</span>
+                    <span class="pacc-arch-sep">+</span>
+                    <span class="pacc-arch-node">Matter.js</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node hi">URL State</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. AZURE -->
+    <div class="pacc" style="--pacc-accent:#EF4444" id="pacc-azure">
+      <div class="pacc-row" onclick="toggleAcc('azure')">
+        <div class="pacc-icon">AZ</div>
+        <div class="pacc-meta">
+          <div class="pacc-name">Azure Data Engineering Pipelines</div>
+          <div class="pacc-year">2025 · Data Engineering · Azure · Databricks</div>
+        </div>
+        <div class="pacc-controls">
+          <a class="pacc-ext" href="https://github.com/AdithyaChauhan" target="_blank" onclick="event.stopPropagation()">GitHub ↗</a>
+          <div class="pacc-chevron">↓</div>
+        </div>
+      </div>
+      <div class="pacc-body">
+        <div class="pacc-body-inner">
+          <div class="pacc-preview">
+            <div class="pacc-preview-bg"></div><div class="pacc-media pacc-cover"><span class="pacc-media-tag">Pipeline design</span><div class="pacc-cover-glyph"><svg width="118" height="84" viewBox="0 0 118 84" aria-hidden="true"><rect x="32" y="14" width="54" height="15" rx="3" fill="none" stroke-width="1.6" opacity=".5"/><rect x="23" y="35" width="72" height="15" rx="3" fill="none" stroke-width="1.6" opacity=".75"/><rect x="14" y="56" width="90" height="15" rx="3" fill="none" stroke-width="1.8" opacity="1"/></svg></div><div class="pacc-cover-stats"><span>Bronze → Silver → Gold</span><span>Metadata-driven CDC</span><span>1 template · N tables</span></div></div>
+            <div class="pacc-preview-content">
+              <div class="pacc-preview-left">
+                <div class="pacc-preview-badge">Medallion ETL · CDC · ADF · Databricks</div>
+                <p class="pacc-preview-desc">Two pipelines from Sigmoid internship. Medallion ETL (Bronze→Silver→Gold) on Databricks with PySpark and Delta Lake for ACID-guaranteed transforms. Metadata-driven CDC ingestion on Azure Data Factory with watermark-based change tracking and parameterized ForEach loops — one template handles N source tables.</p>
+                <div class="pacc-preview-tags">
+                  <span class="pacc-preview-tag">Databricks</span><span class="pacc-preview-tag">PySpark</span>
+                  <span class="pacc-preview-tag">Delta Lake</span><span class="pacc-preview-tag">Azure Data Factory</span>
+                  <span class="pacc-preview-tag">ADLS Gen2</span><span class="pacc-preview-tag">Parquet</span>
+                </div>
+                <div class="pacc-preview-actions">
+                  <button class="pacc-btn-case" onclick="openCase('azure')">Explore architecture →</button>
+                  <a class="pacc-btn-link" href="https://github.com/AdithyaChauhan" target="_blank">GitHub ↗</a>
+                </div>
+              </div>
+              <div class="pacc-preview-right">
+                <div class="pacc-arch">
+                  <div class="pacc-arch-title">Medallion layers</div>
+                  <div class="pacc-arch-flow">
+                    <span class="pacc-arch-node">Azure SQL</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node">Bronze</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node hi">Silver</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node hi">Gold</span>
+                    <span class="pacc-arch-sep">←</span>
+                    <span class="pacc-arch-node">PySpark</span>
+                    <span class="pacc-arch-sep">+</span>
+                    <span class="pacc-arch-node">Delta Lake</span>
+                  </div>
+                  <div class="pacc-arch-flow" style="margin-top:6px">
+                    <span class="pacc-arch-node">ADF ForEach</span>
+                    <span class="pacc-arch-sep">→</span>
+                    <span class="pacc-arch-node hi">CDC Watermark</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="proj-hatch" style="margin-top:0"></div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════ SKILLS -->
+<section id="skills" class="sect-reveal">
+  <div class="section-label">Skills</div>
+  <h2 class="section-heading">What I work with.</h2>
+  <p class="section-sub">Across AI systems, backend engineering, data infrastructure, DevOps, and frontend.</p>
+  <div class="skills-grid">
+    <div class="skill-group"><div class="skill-group-label">Core</div><div class="skill-items"><span class="skill-item">Python</span><span class="skill-item">TypeScript</span><span class="skill-item">JavaScript</span><span class="skill-item">SQL</span><span class="skill-item">FastAPI</span><span class="skill-item">PostgreSQL</span><span class="skill-item">REST APIs</span></div></div>
+    <div class="skill-group"><div class="skill-group-label">AI Systems</div><div class="skill-items"><span class="skill-item">LangGraph</span><span class="skill-item">LangChain</span><span class="skill-item">Agentic AI</span><span class="skill-item">DeepEval</span><span class="skill-item">LangSmith</span><span class="skill-item">Prompt Engineering</span></div></div>
+    <div class="skill-group"><div class="skill-group-label">Data & Cloud</div><div class="skill-items"><span class="skill-item">Azure</span><span class="skill-item">AWS</span><span class="skill-item">Databricks</span><span class="skill-item">PySpark</span><span class="skill-item">Delta Lake</span></div></div>
+    <div class="skill-group"><div class="skill-group-label">DevOps</div><div class="skill-items"><span class="skill-item">Docker</span><span class="skill-item">Kubernetes</span><span class="skill-item">Helm</span><span class="skill-item">Terraform</span><span class="skill-item">GitHub Actions</span><span class="skill-item">CI/CD</span></div></div>
+    <div class="skill-group"><div class="skill-group-label">Observability</div><div class="skill-items"><span class="skill-item">Prometheus</span><span class="skill-item">Grafana</span><span class="skill-item">Loki</span><span class="skill-item">LangSmith</span></div></div>
+    <div class="skill-group"><div class="skill-group-label">Frontend & 3D</div><div class="skill-items"><span class="skill-item">Next.js</span><span class="skill-item">React</span><span class="skill-item">Three.js</span><span class="skill-item">React Three Fiber</span><span class="skill-item">GSAP</span><span class="skill-item">Tailwind</span><span class="skill-item">Prisma</span></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════ EXPERIENCE -->
+<section id="experience" class="sect-reveal">
+  <div class="section-label">Experience</div>
+  <h2 class="section-heading">Where I've worked.</h2>
+  <p class="section-sub" style="margin-bottom:36px">7 months at Sigmoid Analytics — structured training, then a production capstone.</p>
+  <div class="exp-card">
+    <div class="exp-header">
+      <div><div class="exp-role">DataOps Intern</div><div class="exp-company">Sigmoid Analytics</div></div>
+      <div class="exp-period">November 2025 – June 2026</div>
+    </div>
+    <p class="exp-desc">A six-month structured engineering rotation across the modern cloud, data, and AI stack — followed by a solo production capstone taken from blank repo to a deployed, observable system.</p>
+    <ul class="exp-bullets">
+      <li><strong>Cross-domain training</strong> — formally assessed across cloud (Azure, AWS), DevOps (Docker, Kubernetes, Helm, Terraform), data engineering (Databricks, PySpark), and GenAI (LangChain, FastAPI).</li>
+      <li><strong>Sole engineer on the capstone</strong> — owned a production multi-agent LLM system end to end in 24 days: design, implementation, testing, containerization, CI/CD, and observability. <a href="#projects">Full architecture in Projects ↑</a></li>
+      <li><strong>Production discipline</strong> — treated observability, automated evaluation, and CI/CD as first-class from day one rather than afterthoughts — the system shipped instrumented and quality-gated, not just functional.</li>
+    </ul>
+    <div class="exp-tech">
+      <span>Azure</span><span>AWS</span><span>Databricks</span>
+      <span>PySpark</span><span>Docker</span><span>Kubernetes</span>
+      <span>Helm</span><span>Terraform</span><span>LangGraph</span><span>FastAPI</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════ CONTACT -->
+<section id="contact" class="sect-reveal">
+  <div class="contact-inner">
+    <div class="section-label" style="text-align:center;margin-bottom:18px">Contact</div>
+    <h2 class="contact-heading">Let's work together.</h2>
+    <p class="contact-sub">Actively looking for roles in AI engineering, backend systems, or data engineering. If you're building something interesting, I want to hear about it.</p>
+    <div class="contact-links">
+      <a href="mailto:adithyachauhan4@gmail.com" class="contact-link contact-email">adithyachauhan4@gmail.com</a>
+      <a href="https://linkedin.com/in/AdithyaChauhan" target="_blank" class="contact-link">LinkedIn ↗</a>
+      <a href="https://github.com/AdithyaChauhan" target="_blank" class="contact-link">GitHub ↗</a>
+      <a href="tel:6309464585" class="contact-link">+91 63094 64585</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Adithya Singh Chauhan · Bengaluru, India</span>
+  <span>adithyachauhan4@gmail.com</span>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════ OVERLAY -->
+<div id="overlay">
+  <button class="overlay-close" onclick="closeCase()">✕ Close</button>
+  <div class="overlay-inner" id="overlay-content"></div>
+</div>
+
+<script>
+// ── Case study content ────────────────────────────────────────────────────────
+const cases = {
+
+// ══════════════════════════════════════════════════════════ MULTI-AGENT
+multiagent: `
+<div class="ov-hero">
+  <div class="ov-eyebrow">Case Study · Capstone · Sigmoid Analytics · 2026</div>
+  <h1 class="ov-title">Multi-Agent E-Commerce Customer Service System</h1>
+  <p class="ov-subtitle">Production LLM application handling product discovery, order management, and customer support through three specialist LangGraph agents orchestrated by an intent router. Built in 24 days with full observability and a 6-stage CI/CD pipeline.</p>
+  <div class="ov-stack">
+    <span class="ov-tag">FastAPI</span><span class="ov-tag">LangGraph</span><span class="ov-tag">GPT-4o-mini</span>
+    <span class="ov-tag">PostgreSQL</span><span class="ov-tag">SQLAlchemy</span><span class="ov-tag">Docker</span>
+    <span class="ov-tag">Kubernetes</span><span class="ov-tag">Helm</span><span class="ov-tag">GitHub Actions</span>
+    <span class="ov-tag">Prometheus</span><span class="ov-tag">Grafana</span><span class="ov-tag">Loki</span>
+    <span class="ov-tag">LangSmith</span><span class="ov-tag">DeepEval</span>
+  </div>
+</div>
+
+<div class="ov-section">
+  <div class="ov-section-label">System Architecture</div>
+  <h2 class="ov-section-title">End-to-end request flow</h2>
+  <p class="ov-section-body">Every message passes through a deterministic safety gate and an LLM intent router before reaching any agent. Safety-critical logic — auth, cancellation guards, severity classification — is always Python, never LLM behavior. The LLM only touches language: extraction, ranking descriptions, and response generation.</p>
+  <div class="diagram-box">
+    <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="ma-grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M 22 0 L 0 0 0 22" fill="none" stroke="#3b4a63" stroke-width="0.4" opacity="0.5"/></pattern>
+        <marker id="ma-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7z" fill="#2a9d8f" opacity="0.8"/></marker>
+        <marker id="ma-g" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7z" fill="#10B981" opacity="0.8"/></marker>
+        <marker id="ma-o" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7z" fill="#a78bfa" opacity="0.8"/></marker>
+        <filter id="ma-glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <rect width="800" height="500" fill="url(#ma-grid)"/>
+      <rect x="310" y="14" width="180" height="38" rx="8" fill="#2a3a52" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="400" y="38" text-anchor="middle" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="11">POST /chat</text>
+      <line x1="400" y1="52" x2="400" y2="82" stroke="#2a9d8f" stroke-width="1.5" marker-end="url(#ma-arr)" opacity="0.7"/>
+      <rect x="290" y="82" width="220" height="42" rx="8" fill="#1e293b" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5 3"/>
+      <text x="400" y="100" text-anchor="middle" fill="#EF4444" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Safety Gate</text>
+      <text x="400" y="116" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">regex · keyword block · pre-LLM · zero latency</text>
+      <line x1="400" y1="124" x2="400" y2="154" stroke="#2a9d8f" stroke-width="1.5" marker-end="url(#ma-arr)" opacity="0.7"/>
+      <rect x="265" y="154" width="270" height="52" rx="10" fill="#2a3a52" stroke="#2a9d8f" stroke-width="2" filter="url(#ma-glow)"/>
+      <text x="400" y="176" text-anchor="middle" fill="#2a9d8f" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">LLM Intent Router</text>
+      <text x="400" y="194" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="10">product | order | support | unclear → confidence score</text>
+      <circle cx="400" cy="180" r="0" fill="none" stroke="#2a9d8f" stroke-width="1.5" opacity="0"><animate attributeName="r" values="28;58" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0" dur="2.5s" repeatCount="indefinite"/></circle>
+      <line x1="400" y1="206" x2="400" y2="234" stroke="#2a9d8f" stroke-width="1.5" marker-end="url(#ma-arr)" opacity="0.7"/>
+      <rect x="290" y="234" width="220" height="42" rx="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5 3"/>
+      <text x="400" y="252" text-anchor="middle" fill="#7c3aed" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Auth Gate</text>
+      <text x="400" y="268" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">JWT(HS256) · X-User-ID dev fallback · anon-uuid4 · IDOR</text>
+      <path d="M 330 276 Q 155 296 125 326" stroke="#2a9d8f" stroke-width="1.5" fill="none" marker-end="url(#ma-arr)" opacity="0.5" stroke-dasharray="5 3"><animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.8s" repeatCount="indefinite"/></path>
+      <line x1="400" y1="276" x2="400" y2="326" stroke="#10B981" stroke-width="1.5" marker-end="url(#ma-g)" opacity="0.5" stroke-dasharray="5 3"><animate attributeName="stroke-dashoffset" from="0" to="-16" dur="2s" repeatCount="indefinite"/></line>
+      <path d="M 470 276 Q 645 296 675 326" stroke="#a78bfa" stroke-width="1.5" fill="none" marker-end="url(#ma-o)" opacity="0.5" stroke-dasharray="5 3"><animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.6s" repeatCount="indefinite"/></path>
+      <rect x="20" y="326" width="190" height="54" rx="10" fill="#1e293b" stroke="#2a9d8f" stroke-width="1.5"/>
+      <text x="115" y="346" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Product Agent</text>
+      <text x="115" y="362" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">extract→search→rank→relax→enrich</text>
+      <text x="115" y="374" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">+ enrichment subgraph (8-signal score)</text>
+      <rect x="305" y="326" width="190" height="54" rx="10" fill="#1e293b" stroke="#10B981" stroke-width="1.5"/>
+      <text x="400" y="346" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Order Agent</text>
+      <text x="400" y="362" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">list→select→status→cancel</text>
+      <text x="400" y="374" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">+ tracking subgraph · cancellation guard</text>
+      <rect x="590" y="326" width="190" height="54" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="685" y="346" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Support Agent</text>
+      <text x="685" y="362" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">classify→ticket→resolve</text>
+      <text x="685" y="374" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">+ escalation subgraph (P1 safety)</text>
+      <line x1="115" y1="380" x2="280" y2="428" stroke="#3b4a63" stroke-width="1.2" opacity="0.7"/>
+      <line x1="400" y1="380" x2="400" y2="428" stroke="#3b4a63" stroke-width="1.2" opacity="0.7"/>
+      <line x1="685" y1="380" x2="520" y2="428" stroke="#3b4a63" stroke-width="1.2" opacity="0.7"/>
+      <rect x="200" y="428" width="400" height="44" rx="10" fill="#0f172a" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="400" y="446" text-anchor="middle" fill="#94A3B8" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="500">PostgreSQL · 8 tables</text>
+      <text x="400" y="462" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">users · sessions · orders · products · tickets · reviews · specs · tags</text>
+    </svg>
+    <p class="diagram-caption">7 compiled LangGraph state graphs · deterministic safety at every critical decision · 8-table PostgreSQL schema</p>
+  </div>
+</div>
+
+<div class="ov-section">
+  <div class="ov-section-label">Product Agent Deep Dive</div>
+  <h2 class="ov-section-title">Query relaxation, tier ranking, context restoration</h2>
+  <p class="ov-section-body">The most complex agent. Handles the full search loop: extraction → SQL search → LLM ranking → 5-step relaxation → keyword recovery fallback → session context restoration on no-results. Each step is a LangGraph node with typed state transitions.</p>
+  <div class="flow-row">
+    <span class="flow-node">extract_preferences</span><span class="flow-arrow">→</span>
+    <span class="flow-node">search_products</span><span class="flow-arrow">→</span>
+    <span class="flow-node">rank_and_filter</span><span class="flow-arrow">→</span>
+    <span class="flow-node">route_after_rank</span><span class="flow-arrow">→</span>
+    <span class="flow-node">broaden_search</span><span class="flow-arrow">→</span>
+    <span class="flow-node">keyword_recovery</span><span class="flow-arrow">→</span>
+    <span class="flow-node">product_enrichment ↳ subgraph</span><span class="flow-arrow">→</span>
+    <span class="flow-node">format_recommendations</span>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-label">Tier Ranker</div><div class="feat-title">relevant / maybe / no</div><div class="feat-body">LLM returns <code>{"relevant":[],"maybe":[],"no":[]}</code> instead of an ordered list. Empty ranked list routes back to <code>broaden_search</code> via a conditional edge — not a dead end. "No" products never shown.</div></div>
+    <div class="feat-card"><div class="feat-label">5-Step Relaxation</div><div class="feat-title">type → price → brand → keywords → subcategory</div><div class="feat-body">Each broaden step drops one filter and retries. Keyword recovery fires after full exhaustion — searches original keywords only (no subcategory) to find products in adjacent categories.</div></div>
+    <div class="feat-card"><div class="feat-label">Brand Fuzzy Matching</div><div class="feat-title">rapidfuzz threshold 75</div><div class="feat-body">Exact match first. If no exact match, rapidfuzz WRatio against live distinct brands from DB. Threshold 75 was empirically tuned: "Sonny"→"Sony" scores 88.9, "Bose"→"StyleHouse" scores 67.5 — clean split.</div></div>
+    <div class="feat-card"><div class="feat-label">Context Restoration</div><div class="feat-title">original_prefs survives no-results</div><div class="feat-body">After full exhaustion, <code>respond_no_results</code> returns <code>original_preferences</code> with brand cleared. Next turn inherits subcategory context — "under 2000" after "bajaj smartwatches" correctly searches smartwatches, not everything.</div></div>
+    <div class="feat-card"><div class="feat-label">Dynamic Catalog</div><div class="feat-title">DB-driven prompt, 5-min TTL</div><div class="feat-body">PROMPT_CATALOG is generated from <code>SELECT DISTINCT category, subcategory FROM products</code> at startup. New subcategories become searchable without a code change or redeploy. TTL cache prevents per-request DB hits.</div></div>
+    <div class="feat-card"><div class="feat-label">Vague Browse Detection</div><div class="feat-title">7-signal check including type</div><div class="feat-body">Checks category, subcategory, type, keywords, brand, min_price, max_price. A message extracting only <code>type:"wireless"</code> (nothing else) is a type refinement, not a reset — inherited subcategory from session stays intact.</div></div>
+  </div>
+  <div class="callout">
+    <p><strong>Why the LLM is confined:</strong> Auth (JWT HS256), cancellation guards (shipped/in-transit/delivered orders can't be cancelled), severity classification (P1/P2/P3), and IDOR protection (users can only see their own orders) are all deterministic Python. The LLM can't be prompted into bypassing these — they run before or after the LLM node, never inside it.</p>
+  </div>
+</div>
+
+<div class="ov-section">
+  <div class="ov-section-label">Observability Stack</div>
+  <h2 class="ov-section-title">Four layers — every request is traceable end to end</h2>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-label">Prometheus</div><div class="feat-title">Per-node custom metrics</div><div class="feat-body">llm_requests_total (agent, node), llm_duration_seconds (latency histogram), llm_tokens_total (prompt/completion/total), http_requests_total (status, path), active_sessions gauge. Scraped by Grafana.</div></div>
+    <div class="feat-card"><div class="feat-label">Loki + Grafana</div><div class="feat-title">Correlated structured logs</div><div class="feat-body">JSON logs with request_id on every line. RAW_LLM vs EXTRACTED diff logged per turn — shows exactly what the LLM returned vs what the merge produced. Router intent, search results, rank breakdown all logged.</div></div>
+    <div class="feat-card"><div class="feat-label">LangSmith</div><div class="feat-title">Full LLM trace + user feedback</div><div class="feat-body">collect_runs() captures the complete trace per request. run_id returned in ChatResponse to the frontend. Thumbs up/down UI posts to /api/feedback → LangSmith. Per-turn auto-scoring: quality, relevance, conciseness.</div></div>
+    <div class="feat-card"><div class="feat-label">DeepEval</div><div class="feat-title">LLM evaluation as a CI/CD gate</div><div class="feat-body">Relevance, correctness, conciseness scored by GPT-4o-mini as judge. 80% threshold — GitHub Actions pipeline exits code 1 below this, blocking the Helm deploy. Fixture mode for CI, live mode (RUN_LIVE_EVAL=true) for full eval.</div></div>
+  </div>
+  <div class="pipeline">
+    <div class="pipe-stage"><div class="pipe-num">01</div><div class="pipe-name">Lint</div><div class="pipe-detail">ruff · mypy</div></div>
+    <div class="pipe-stage"><div class="pipe-num">02</div><div class="pipe-name">Test</div><div class="pipe-detail">pytest 80% cov</div></div>
+    <div class="pipe-stage"><div class="pipe-num">03</div><div class="pipe-name">Docker</div><div class="pipe-detail">image build</div></div>
+    <div class="pipe-stage"><div class="pipe-num">04</div><div class="pipe-name">Helm</div><div class="pipe-detail">k8s staging</div></div>
+    <div class="pipe-stage"><div class="pipe-num">05</div><div class="pipe-name">DeepEval</div><div class="pipe-detail">LLM eval gate</div></div>
+    <div class="pipe-stage"><div class="pipe-num">06</div><div class="pipe-name">LangSmith</div><div class="pipe-detail">push report</div></div>
+  </div>
+</div>`,
+
+// ══════════════════════════════════════════════════════════ SOCIAL MEDIA
+social: `
+<div class="ov-hero">
+  <div class="ov-eyebrow">Full Stack · Next.js 14 · Personal Project</div>
+  <h1 class="ov-title">Social Media Platform</h1>
+  <p class="ov-subtitle">Full social graph with posts, comments, likes, follows, and real-time notifications. Built with Next.js 14 Server Actions, Prisma ORM on Neon PostgreSQL, Clerk auth with automatic user sync, and UploadThing for media.</p>
+  <div class="ov-stack">
+    <span class="ov-tag">Next.js 14</span><span class="ov-tag">TypeScript</span><span class="ov-tag">Prisma ORM</span>
+    <span class="ov-tag">PostgreSQL (Neon)</span><span class="ov-tag">Clerk</span><span class="ov-tag">UploadThing</span>
+    <span class="ov-tag">Radix UI</span><span class="ov-tag">Tailwind CSS</span><span class="ov-tag">next-themes</span>
+  </div>
+</div>
+
+<div class="ov-section">
+  <div class="ov-section-label">Data Model</div>
+  <h2 class="ov-section-title">Six models, designed around read patterns</h2>
+  <p class="ov-section-body">The schema was designed around the queries that run most often — post feed with nested comments and like counts, follow suggestions excluding already-followed users, and notification streams ordered by recency. Every hot join path has a composite index.</p>
+  <div class="schema-grid">
+    <div class="schema-model">
+      <div class="schema-name">User</div>
+      <ul class="schema-fields">
+        <li><span>clerkId</span> @unique — sync bridge</li>
+        <li><span>username</span> @unique</li>
+        <li><span>bio, location, website</span></li>
+        <li><span>posts</span> Post[]</li>
+        <li><span>followers / following</span> Follows[]</li>
+        <li><span>notifications</span> received + created</li>
+      </ul>
+    </div>
+    <div class="schema-model">
+      <div class="schema-name">Post</div>
+      <ul class="schema-fields">
+        <li><span>authorId</span> → User onDelete:Cascade</li>
+        <li><span>content</span> String?</li>
+        <li><span>image</span> String? (UploadThing URL)</li>
+        <li><span>comments</span> Comment[]</li>
+        <li><span>likes</span> Like[]</li>
+        <li><span>notifications</span> Notification[]</li>
+      </ul>
+    </div>
+    <div class="schema-model">
+      <div class="schema-name">Like</div>
+      <ul class="schema-fields">
+        <li><span>userId + postId</span> → composite</li>
+        <li>@@unique([userId, postId])</li>
+        <li>@@index([userId, postId])</li>
+        <li style="color:#10B981;font-size:10px;margin-top:6px">unique constraint prevents double-likes at DB level — no application-layer check needed</li>
+      </ul>
+    </div>
+    <div class="schema-model">
+      <div class="schema-name">Follows</div>
+      <ul class="schema-fields">
+        <li><span>followerId + followingId</span></li>
+        <li>@@id([followerId, followingId])</li>
+        <li>@@index([followerId, followingId])</li>
+        <li style="color:#10B981;font-size:10px;margin-top:6px">composite PK prevents duplicate follows — no upsert needed</li>
+      </ul>
+    </div>
+    <div class="schema-model">
+      <div class="schema-name">Comment</div>
+      <ul class="schema-fields">
+        <li><span>authorId</span> → User cascade</li>
+        <li><span>postId</span> → Post cascade</li>
+        <li>@@index([authorId, postId])</li>
+        <li style="color:#64748B;font-size:10px;margin-top:6px">ordered asc by createdAt in queries</li>
+      </ul>
+    </div>
+    <div class="schema-model">
+      <div class="schema-name">Notification</div>
+      <ul class="schema-fields">
+        <li><span>type</span> LIKE | COMMENT | FOLLOW</li>
+        <li><span>read</span> Boolean @default(false)</li>
+        <li><span>postId? commentId?</span> optional links</li>
+        <li>@@index([userId, createdAt])</li>
+        <li style="color:#10B981;font-size:10px;margin-top:6px">bulk markAsRead by ID array</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="ov-section">
+  <div class="ov-section-label">Server Actions Architecture</div>
+  <h2 class="ov-section-title">No API layer — mutations go directly to the database</h2>
+  <p class="ov-section-body">Every mutation is a Next.js Server Action. The client calls the action directly — no fetch, no API route, no separate backend. Each action calls <code>revalidatePath("/")</code> after mutation to purge the Next.js cache and trigger a re-render.</p>
+  <div class="diagram-box">
+    <svg viewBox="0 0 780 360" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="sm-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#10B981" opacity="0.8"/></marker>
+        <marker id="sm-purple" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#7c3aed" opacity="0.8"/></marker>
+      </defs>
+      <rect width="780" height="360" fill="#0f172a" rx="12"/>
+      <text x="20" y="22" fill="#10B981" font-family="JetBrains Mono,monospace" font-size="10" letter-spacing="1">SOCIAL MEDIA · DATA FLOW</text>
+      <rect x="20" y="40" width="160" height="42" rx="8" fill="#1e293b" stroke="#10B981" stroke-width="1.5"/>
+      <text x="100" y="66" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">React Client</text>
+      <rect x="20" y="110" width="160" height="42" rx="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="100" y="136" text-anchor="middle" fill="#7c3aed" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Clerk Auth</text>
+      <text x="100" y="150" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">JWT · session · webhook</text>
+      <rect x="20" y="182" width="160" height="42" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="100" y="208" text-anchor="middle" fill="#a78bfa" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">UploadThing</text>
+      <text x="100" y="222" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">image CDN · type-safe SDK</text>
+      <line x1="180" y1="61" x2="240" y2="90" stroke="#10B981" stroke-width="1.5" marker-end="url(#sm-arr)" opacity="0.7"/>
+      <line x1="180" y1="131" x2="240" y2="115" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#sm-purple)" opacity="0.7"/>
+      <line x1="180" y1="203" x2="240" y2="165" stroke="#a78bfa" stroke-width="1.5" opacity="0.7" marker-end="url(#sm-arr)"/>
+      <rect x="240" y="60" width="230" height="150" rx="10" fill="#2a3a52" stroke="#10B981" stroke-width="1.5"/>
+      <text x="355" y="82" text-anchor="middle" fill="#10B981" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Server Actions ("use server")</text>
+      <text x="256" y="102" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="10">createPost(content, image)</text>
+      <text x="256" y="118" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="10">toggleLike(postId)</text>
+      <text x="256" y="134" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="10">toggleFollow(targetUserId)</text>
+      <text x="256" y="150" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="10">syncUser() — on first Clerk login</text>
+      <text x="256" y="166" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">revalidatePath("/") after every mutation</text>
+      <text x="256" y="200" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">prisma.$transaction for atomic ops</text>
+      <line x1="470" y1="135" x2="530" y2="135" stroke="#10B981" stroke-width="1.5" marker-end="url(#sm-arr)" opacity="0.7"/>
+      <rect x="530" y="100" width="180" height="70" rx="10" fill="#1e293b" stroke="#10B981" stroke-width="1.5"/>
+      <text x="620" y="124" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Prisma ORM</text>
+      <text x="620" y="142" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">type-safe queries</text>
+      <text x="620" y="158" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">include nested relations</text>
+      <line x1="620" y1="170" x2="620" y2="210" stroke="#10B981" stroke-width="1.5" marker-end="url(#sm-arr)" opacity="0.7"/>
+      <rect x="510" y="210" width="220" height="50" rx="10" fill="#0f172a" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="620" y="231" text-anchor="middle" fill="#94A3B8" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="500">Neon PostgreSQL</text>
+      <text x="620" y="249" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">serverless · branching · connection pooling</text>
+      <rect x="200" y="295" width="380" height="52" rx="10" fill="#1e293b" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="390" y="316" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="500">Atomic Follow + Notification</text>
+      <text x="216" y="334" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">prisma.$transaction([follows.create(), notification.create()])</text>
+      <text x="216" y="348" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">follow and FOLLOW notification always created together or neither</text>
+      <line x1="390" y1="260" x2="390" y2="295" stroke="#3b4a63" stroke-width="1.2" opacity="0.7"/>
+    </svg>
+    <p class="diagram-caption">Server Actions eliminate the API layer. Clerk webhook syncs users on first login. prisma.$transaction ensures follow + notification are atomic.</p>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-label">Auth Sync</div><div class="feat-title">syncUser() on first login</div><div class="feat-body">Clerk webhook triggers syncUser() on the first login. Creates a DB User record linked by clerkId. All subsequent DB queries use the internal Prisma user.id, not the Clerk ID.</div></div>
+    <div class="feat-card"><div class="feat-label">Follow System</div><div class="feat-title">Atomic follow + notification</div><div class="feat-body">toggleFollow() wraps Follows.create() and Notification.create({type:"FOLLOW"}) in a single prisma.$transaction. Both succeed or neither does — no orphaned notifications.</div></div>
+    <div class="feat-card"><div class="feat-label">Who To Follow</div><div class="feat-title">Excludes self + already-followed</div><div class="feat-body">getRandomUsers() excludes your own ID AND any user where a Follows record already exists with you as followerId. Clean AND clause in a single Prisma query, take: 3.</div></div>
+    <div class="feat-card"><div class="feat-label">Notifications</div><div class="feat-title">Read/unread with bulk update</div><div class="feat-body">markNotificationsAsRead() takes an array of IDs and runs a single updateMany. Notification page fetches all unread, marks them read on view. Includes related post preview and comment content.</div></div>
+  </div>
+</div>`,
+
+// ══════════════════════════════════════════════════════════ ECOMMERCE
+ecommerce: `
+<div class="ov-hero">
+  <div class="ov-eyebrow">Full Stack · MERN · Personal Project</div>
+  <h1 class="ov-title">E-Commerce Platform</h1>
+  <p class="ov-subtitle">Three-app system — customer storefront, admin dashboard, and Express backend. Separate auth layers for users and admins, Stripe Checkout with webhook verification, Cloudinary parallel image uploads, and a full order lifecycle from cart to delivery.</p>
+  <div class="ov-stack">
+    <span class="ov-tag">React</span><span class="ov-tag">Node.js</span><span class="ov-tag">Express</span>
+    <span class="ov-tag">MongoDB</span><span class="ov-tag">Mongoose</span><span class="ov-tag">Stripe</span>
+    <span class="ov-tag">Cloudinary</span><span class="ov-tag">Multer</span><span class="ov-tag">JWT</span><span class="ov-tag">bcrypt</span>
+  </div>
+</div>
+
+<div class="ov-section">
+  <div class="ov-section-label">Architecture</div>
+  <h2 class="ov-section-title">Three apps, two auth systems, one backend</h2>
+  <p class="ov-section-body">The customer storefront and admin dashboard are entirely separate React apps. They share the same Express backend but hit different route groups protected by different middleware chains — user JWT tokens and admin JWT tokens are signed differently and validated by separate middleware.</p>
+  <div class="diagram-box">
+    <svg viewBox="0 0 780 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="ec-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#a78bfa" opacity="0.8"/></marker>
+        <marker id="ec-purple" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#7c3aed" opacity="0.8"/></marker>
+        <marker id="ec-green" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#10B981" opacity="0.8"/></marker>
+      </defs>
+      <rect width="780" height="400" fill="#0f172a" rx="12"/>
+      <text x="20" y="22" fill="#a78bfa" font-family="JetBrains Mono,monospace" font-size="10" letter-spacing="1">MERN E-COMMERCE · SYSTEM ARCHITECTURE</text>
+      <rect x="20" y="42" width="165" height="66" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="102" y="64" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Customer App</text>
+      <text x="36" y="82" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">browse · cart · checkout</text>
+      <text x="36" y="96" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">size selector · order history</text>
+      <text x="36" y="108" fill="#a78bfa" font-family="JetBrains Mono,monospace" font-size="8">JWT user token</text>
+      <rect x="20" y="134" width="165" height="66" rx="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="102" y="156" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Admin Dashboard</text>
+      <text x="36" y="174" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">add products (4 images)</text>
+      <text x="36" y="188" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">manage orders · update status</text>
+      <text x="36" y="200" fill="#7c3aed" font-family="JetBrains Mono,monospace" font-size="8">JWT admin token (separate)</text>
+      <line x1="185" y1="75" x2="250" y2="130" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ec-arr)" opacity="0.7"/>
+      <line x1="185" y1="167" x2="250" y2="167" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#ec-purple)" opacity="0.7"/>
+      <rect x="250" y="80" width="220" height="180" rx="10" fill="#2a3a52" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="360" y="102" text-anchor="middle" fill="#a78bfa" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Express Backend</text>
+      <text x="266" y="122" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">/api/product — CRUD + images</text>
+      <text x="266" y="138" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">/api/order — COD + Stripe</text>
+      <text x="266" y="154" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">/api/user — register/login/admin</text>
+      <text x="266" y="170" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">/api/cart — add/update/get</text>
+      <text x="266" y="190" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">authUser middleware (user routes)</text>
+      <text x="266" y="206" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">adminAuth middleware (admin routes)</text>
+      <text x="266" y="222" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">multer → Promise.all → Cloudinary</text>
+      <text x="266" y="238" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">bcrypt salt=10 · validator.isEmail()</text>
+      <line x1="470" y1="170" x2="530" y2="170" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#ec-arr)" opacity="0.7"/>
+      <rect x="530" y="130" width="220" height="80" rx="10" fill="#1e293b" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="640" y="156" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">MongoDB</text>
+      <text x="640" y="174" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">products · orders · users</text>
+      <text x="640" y="190" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">cart stored in user.cartData</text>
+      <rect x="20" y="310" width="165" height="66" rx="8" fill="#1e293b" stroke="#10B981" stroke-width="1.5"/>
+      <text x="102" y="332" text-anchor="middle" fill="#10B981" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Stripe</text>
+      <text x="36" y="350" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">Checkout Session per order</text>
+      <text x="36" y="365" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">line_items + delivery charge</text>
+      <text x="36" y="375" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="8">verifyStripe — deletes on failure</text>
+      <rect x="220" y="310" width="165" height="66" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="302" y="332" text-anchor="middle" fill="#a78bfa" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Cloudinary</text>
+      <text x="236" y="350" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">up to 4 images per product</text>
+      <text x="236" y="365" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">Promise.all parallel upload</text>
+      <text x="236" y="375" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="8">secure_url stored in MongoDB</text>
+      <rect x="420" y="310" width="165" height="66" rx="8" fill="#1e293b" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="502" y="332" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="500">Order Lifecycle</text>
+      <text x="436" y="350" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">Order Placed → Processing</text>
+      <text x="436" y="365" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">→ Shipped → Delivered</text>
+      <text x="436" y="375" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="8">admin updates status manually</text>
+      <line x1="360" y1="260" x2="102" y2="310" stroke="#3b4a63" stroke-width="1" opacity="0.6" stroke-dasharray="4 3"/>
+      <line x1="360" y1="260" x2="302" y2="310" stroke="#3b4a63" stroke-width="1" opacity="0.6" stroke-dasharray="4 3"/>
+      <line x1="360" y1="260" x2="502" y2="310" stroke="#3b4a63" stroke-width="1" opacity="0.6" stroke-dasharray="4 3"/>
+    </svg>
+    <p class="diagram-caption">Admin and user JWT tokens are signed differently. Cart is persisted in the User document as a nested map {itemId: {size: quantity}}. Cart cleared atomically on order placement.</p>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-label">Cart</div><div class="feat-title">Nested map in user document</div><div class="feat-body">Cart stored as <code>{itemId: {size: quantity}}</code> in the MongoDB user document. Add increments quantity for existing size, creates new entry otherwise. Cart cleared atomically when order is placed — same findByIdAndUpdate call.</div></div>
+    <div class="feat-card"><div class="feat-label">Images</div><div class="feat-title">Up to 4 per product, parallel upload</div><div class="feat-body">Admin uploads up to 4 images via Multer. Backend collects non-undefined files and runs <code>Promise.all(images.map(img => cloudinary.uploader.upload(...)))</code> — all 4 upload concurrently. Secure URLs stored in the product's image array.</div></div>
+    <div class="feat-card"><div class="feat-label">Payments</div><div class="feat-title">Stripe Checkout + COD</div><div class="feat-body">Stripe path: creates Order in DB, then creates Checkout Session with line_items (cart items + ₹10 delivery). On return, verifyStripe sets payment:true on success or deletes the order on failure. COD path skips Stripe entirely — order placed directly.</div></div>
+    <div class="feat-card"><div class="feat-label">Auth</div><div class="feat-title">bcrypt salt=10 + email validation</div><div class="feat-body">Registration validates email with the <code>validator</code> library and enforces 8-char minimum password before hashing. bcrypt genSalt(10) for hashing. Admin auth is env-var comparison (ADMIN_EMAIL + ADMIN_PASSWORD) — intentionally simple for demo.</div></div>
+    <div class="feat-card"><div class="feat-label">Products</div><div class="feat-title">Category + subCategory + sizes + bestseller</div><div class="feat-body">Product schema: name, description, price, category, subCategory, sizes (array), bestseller (boolean), image (array of CDN URLs), date. Admin can filter and list all products. Users can filter by category, subCategory, and sort by price/date/relevance.</div></div>
+    <div class="feat-card"><div class="feat-label">Orders</div><div class="feat-title">Admin can update status for any order</div><div class="feat-body">Admin panel lists all orders across all users. Admin selects new status from dropdown, calls updateStatus endpoint. Customer order history shows their orders only, filtered by userId. Status flows: Order Placed → Processing → Shipped → Delivered.</div></div>
+  </div>
+</div>`,
+
+// ══════════════════════════════════════════════════════════ SKATEBOARD
+skateboard: `
+<div class="ov-hero">
+  <div class="ov-eyebrow">3D · Next.js 15 · React 19 · Headless CMS · Personal Project</div>
+  <h1 class="ov-title">Skateboard Suburbia</h1>
+  <p class="ov-subtitle">Real-time 3D skateboard configurator — deck, wheel, truck, bolt customization with HDR lighting, PBR textures, and camera that auto-repositions to focus the selected component. URL state sync makes every configuration shareable.</p>
+  <div class="ov-stack">
+    <span class="ov-tag">Next.js 15</span><span class="ov-tag">React 19</span><span class="ov-tag">Three.js</span>
+    <span class="ov-tag">React Three Fiber</span><span class="ov-tag">@react-three/drei</span>
+    <span class="ov-tag">GSAP + ScrollTrigger</span><span class="ov-tag">Matter.js</span><span class="ov-tag">Prismic CMS</span>
+  </div>
+</div>
+
+<div class="ov-section">
+  <div class="ov-section-label">3D Scene Architecture</div>
+  <h2 class="ov-section-title">Camera that follows your selection</h2>
+  <p class="ov-section-body">The most technically interesting part: the camera auto-repositions every time you select a new component. Each part has a hand-tuned target + position vector pair. Selecting "wheels" zooms to the wheel cluster. Selecting "deck" pulls back to show the full board top-down. Smooth animated transition via CameraControls.</p>
+  <div class="diagram-box">
+    <svg viewBox="0 0 780 360" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="sk-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#7c3aed" opacity="0.8"/></marker>
+        <marker id="sk-green" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#10B981" opacity="0.8"/></marker>
+      </defs>
+      <rect width="780" height="360" fill="#0f172a" rx="12"/>
+      <text x="20" y="22" fill="#7c3aed" font-family="JetBrains Mono,monospace" font-size="10" letter-spacing="1">SKATEBOARD SUBURBIA · 3D CONFIGURATOR FLOW</text>
+      <rect x="20" y="42" width="180" height="100" rx="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="110" y="64" text-anchor="middle" fill="#7c3aed" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Prismic CMS</text>
+      <text x="36" y="84" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">board_customizer custom type</text>
+      <text x="36" y="100" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">wheels[] · decks[] · metals[]</text>
+      <text x="36" y="116" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">each with uid + texture + color</text>
+      <text x="36" y="132" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">ISR revalidation via webhook</text>
+      <line x1="200" y1="92" x2="260" y2="92" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#sk-arr)" opacity="0.7"/>
+      <rect x="260" y="42" width="220" height="100" rx="8" fill="#2a3a52" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="370" y="64" text-anchor="middle" fill="#7c3aed" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Next.js Page (SSR)</text>
+      <text x="276" y="84" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">createClient() fetch on server</text>
+      <text x="276" y="100" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">SliceZone → BoardCustomizer</text>
+      <text x="276" y="116" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">CustomizerContext (React ctx)</text>
+      <text x="276" y="132" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">selectedWheel/Deck/Truck/Bolt</text>
+      <line x1="480" y1="92" x2="540" y2="92" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#sk-arr)" opacity="0.7"/>
+      <rect x="540" y="42" width="220" height="190" rx="10" fill="#2a3a52" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="650" y="64" text-anchor="middle" fill="#7c3aed" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Three.js Canvas</text>
+      <text x="556" y="84" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">Environment HDR (warehouse-512)</text>
+      <text x="556" y="100" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">directionalLight castShadow</text>
+      <text x="556" y="116" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">fog [#3B3A3A, 3, 10]</text>
+      <text x="556" y="132" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">StageFloor — concrete normal map</text>
+      <text x="556" y="148" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">anisotropy:8 repeat:30×30</text>
+      <text x="556" y="164" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">Skateboard.gltf + PBR textures</text>
+      <text x="556" y="180" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">useTexture() — live texture swap</text>
+      <text x="556" y="196" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">CameraControls minDist:0.2 maxDist:4</text>
+      <text x="556" y="212" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">colliderMeshes floor — no clip</text>
+      <rect x="20" y="180" width="460" height="80" rx="8" fill="#1e293b" stroke="#10B981" stroke-width="1.5"/>
+      <text x="250" y="202" text-anchor="middle" fill="#10B981" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">URL State Sync — Shareable Configurations</text>
+      <text x="36" y="222" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">useEffect on each selected* → url.searchParams.set("wheel", uid)</text>
+      <text x="36" y="238" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">router.replace(url.href) — no page reload, URL updates silently</text>
+      <text x="36" y="254" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">?wheel=X&deck=Y&truck=Z&bolt=W → paste URL → same build loads</text>
+      <rect x="20" y="290" width="460" height="52" rx="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="250" y="312" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="500">Per-Component Camera Focus</text>
+      <text x="36" y="330" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">deck: target(0,0.3,0) pos(1.5,0.8,0)   truck: target(-0.12,0.29,0.57) pos(0.1,0.25,0.9)</text>
+      <text x="36" y="344" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">wheel: target(-0.08,0.54,0.64)           bolt: target(-0.25,0.3,0.62) — zooms to bolt cluster</text>
+    </svg>
+    <p class="diagram-caption">Camera target + position vectors are hand-tuned per component. Selecting deck zooms out to show the full board; selecting bolt zooms to the bolt cluster. CameraControls animates the transition.</p>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-label">3D Rendering</div><div class="feat-title">GLTF + HDR + PBR pipeline</div><div class="feat-body">Skateboard loaded as .gltf + .bin binary. Warehouse HDR at 512px (balance of quality vs load time). Concrete floor uses normal map with anisotropy:8 and 30×30 UV repeat for realistic texture tiling. Shadows cast + received on all meshes.</div></div>
+    <div class="feat-card"><div class="feat-label">Customizer</div><div class="feat-title">useTexture for zero-lag swaps</div><div class="feat-body">React Three Fiber's useTexture() preloads all available wheel and deck textures upfront (<code>Preload all</code>). Selecting a new deck or wheel just swaps the texture reference — no network request, no loading state, instant visual update.</div></div>
+    <div class="feat-card"><div class="feat-label">Camera</div><div class="feat-title">Per-selection focus with collision</div><div class="feat-body">Each selected* useEffect calls setCameraControls() with part-specific target + position vectors. CameraControls.setTarget() and setPosition() with true flag animate smoothly. Floor mesh added as colliderMesh to prevent camera from clipping through the ground.</div></div>
+    <div class="feat-card"><div class="feat-label">CMS</div><div class="feat-title">Content editable without code</div><div class="feat-body">All board options (wheels, decks, metals), skater profiles, and homepage content live in Prismic. /api/revalidate webhook updates cached pages when content changes. /api/preview enables draft mode for content editors.</div></div>
+    <div class="feat-card"><div class="feat-label">GSAP</div><div class="feat-title">ScrollTrigger section reveals</div><div class="feat-body">ScrollTrigger drives section reveals, board intro timeline, and skater card stagger animations. GSAP @gsap/react integration for React-compatible refs. Coordinated with the 3D scene so scroll position influences the board pose.</div></div>
+    <div class="feat-card"><div class="feat-label">Matter.js</div><div class="feat-title">Physics for floating elements</div><div class="feat-body">Matter.js Engine + World + Bodies drives the floating decorative elements in the hero section — gravity, bounce, and collision between elements. Gives the landing page a kinetic, alive feeling without being distracting.</div></div>
+  </div>
+</div>`,
+
+// ══════════════════════════════════════════════════════════ AZURE
+azure: `
+<div class="ov-hero">
+  <div class="ov-eyebrow">Data Engineering · Azure · Sigmoid Analytics Internship</div>
+  <h1 class="ov-title">Azure Data Engineering Pipelines</h1>
+  <p class="ov-subtitle">Two production-grade data pipelines built during the Sigmoid Analytics internship. A Medallion ETL architecture on Databricks with PySpark and Delta Lake. A metadata-driven CDC ingestion pipeline on Azure Data Factory with watermark-based change tracking.</p>
+  <div class="ov-stack">
+    <span class="ov-tag">Azure Databricks</span><span class="ov-tag">PySpark</span><span class="ov-tag">Delta Lake</span>
+    <span class="ov-tag">ADLS Gen2</span><span class="ov-tag">Azure Data Factory</span>
+    <span class="ov-tag">Azure SQL Database</span><span class="ov-tag">Parquet</span><span class="ov-tag">Power BI</span>
+  </div>
+</div>
+
+<div class="ov-section">
+  <div class="ov-section-label">Pipeline 1 · Databricks</div>
+  <h2 class="ov-section-title">Medallion ETL — Bronze → Silver → Gold</h2>
+  <p class="ov-section-body">Real-estate transaction, unit, and project data processed through three layers. Bronze is raw append-only storage. Silver applies PySpark transformations to clean, type-cast, and join data. Gold produces three business-ready KPI tables for reporting.</p>
+  <div class="diagram-box">
+    <svg viewBox="0 0 780 330" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="az-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#EF4444" opacity="0.8"/></marker>
+        <marker id="az-gold" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#a78bfa" opacity="0.8"/></marker>
+        <marker id="az-green" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#10B981" opacity="0.8"/></marker>
+      </defs>
+      <rect width="780" height="330" fill="#0f172a" rx="12"/>
+      <text x="20" y="22" fill="#EF4444" font-family="JetBrains Mono,monospace" font-size="10" letter-spacing="1">DATABRICKS MEDALLION ARCHITECTURE</text>
+      <rect x="20" y="40" width="120" height="60" rx="8" fill="#1e293b" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="80" y="64" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Source</text>
+      <text x="80" y="80" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">transactions</text>
+      <text x="80" y="93" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">units · projects</text>
+      <line x1="140" y1="70" x2="180" y2="70" stroke="#3b4a63" stroke-width="1.5" marker-end="url(#az-arr)" opacity="0.7"/>
+      <rect x="180" y="30" width="160" height="80" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+      <text x="260" y="52" text-anchor="middle" fill="#a78bfa" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Bronze</text>
+      <text x="196" y="72" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">raw ingest · no transform</text>
+      <text x="196" y="88" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">Delta format · append-only</text>
+      <text x="196" y="104" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">ADLS Gen2 · audit trail</text>
+      <line x1="340" y1="70" x2="380" y2="70" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#az-gold)" opacity="0.7"/>
+      <rect x="380" y="30" width="160" height="80" rx="8" fill="#2a3a52" stroke="#94A3B8" stroke-width="2"/>
+      <text x="460" y="52" text-anchor="middle" fill="#94A3B8" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Silver</text>
+      <text x="396" y="72" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">PySpark transforms</text>
+      <text x="396" y="88" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">type cast · null drop · regex</text>
+      <text x="396" y="104" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">multi-source join → Delta</text>
+      <line x1="540" y1="70" x2="580" y2="70" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#az-arr)" opacity="0.7"/>
+      <rect x="580" y="30" width="180" height="80" rx="8" fill="#2a3a52" stroke="#10B981" stroke-width="2"/>
+      <text x="670" y="52" text-anchor="middle" fill="#10B981" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="700">Gold</text>
+      <text x="596" y="72" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">KPI 1: sales trends by quarter</text>
+      <text x="596" y="88" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">KPI 2: area performance</text>
+      <text x="596" y="104" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">KPI 3: supply distribution</text>
+      <rect x="180" y="150" width="360" height="90" rx="8" fill="#1e293b" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="360" y="172" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="500">Silver PySpark Transforms (actual code)</text>
+      <text x="196" y="192" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">df.withColumn("price", col("price").cast(DoubleType()))</text>
+      <text x="196" y="208" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">df.dropna(subset=["transaction_id", "unit_id"])</text>
+      <text x="196" y="224" fill="#94A3B8" font-family="JetBrains Mono,monospace" font-size="9">df.join(units_df, on="unit_id", how="left")</text>
+      <text x="196" y="234" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="8">→ write.format("delta").mode("overwrite").save(silver_path)</text>
+      <path d="M 460 110 L 460 135 L 360 135 L 360 150" stroke="#94A3B8" stroke-width="1" fill="none" stroke-dasharray="4 3" opacity="0.5"/>
+      <rect x="180" y="268" width="175" height="44" rx="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="267" y="289" text-anchor="middle" fill="#7c3aed" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Databricks Workflows</text>
+      <text x="267" y="305" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">B → S → G sequential jobs</text>
+      <rect x="385" y="268" width="155" height="44" rx="8" fill="#1e293b" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="462" y="289" text-anchor="middle" fill="#EF4444" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Power BI</text>
+      <text x="462" y="305" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">Gold tables → SQL dashboard</text>
+    </svg>
+    <p class="diagram-caption">Bronze is append-only raw storage. Silver applies PySpark type casting, null handling, regex cleaning, and multi-source joins. Gold produces three aggregated KPI tables for business reporting.</p>
+  </div>
+</div>
+
+<div class="ov-section">
+  <div class="ov-section-label">Pipeline 2 · Azure Data Factory</div>
+  <h2 class="ov-section-title">Metadata-driven CDC — one template, any table</h2>
+  <p class="ov-section-body">Instead of one pipeline per source table, a single parameterized Copy Activity template handles any table by accepting schema, table name, and CDC column as parameters. A ForEach loop iterates the table list and runs the same pipeline for each. Watermark table tracks the last successful load time per table — only changed rows are ever loaded.</p>
+  <div class="diagram-box">
+    <svg viewBox="0 0 780 290" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="adf-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#EF4444" opacity="0.8"/></marker>
+        <marker id="adf-green" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#10B981" opacity="0.8"/></marker>
+      </defs>
+      <rect width="780" height="290" fill="#0f172a" rx="12"/>
+      <text x="20" y="22" fill="#EF4444" font-family="JetBrains Mono,monospace" font-size="10" letter-spacing="1">AZURE DATA FACTORY · WATERMARK CDC PIPELINE</text>
+      <rect x="14" y="34" width="752" height="170" rx="10" fill="rgba(239,68,68,0.03)" stroke="#EF4444" stroke-width="1" stroke-dasharray="6 4"/>
+      <text x="28" y="52" fill="#EF4444" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">ForEach (table_list) — runs inner pipeline once per table</text>
+      <rect x="30" y="60" width="130" height="68" rx="8" fill="#1e293b" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="95" y="82" text-anchor="middle" fill="#EF4444" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Lookup</text>
+      <text x="95" y="100" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">watermark_table</text>
+      <text x="95" y="116" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">last_load_time</text>
+      <text x="95" y="124" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="8">per table name</text>
+      <line x1="160" y1="94" x2="210" y2="94" stroke="#EF4444" stroke-width="1.5" marker-end="url(#adf-arr)" opacity="0.7"/>
+      <rect x="210" y="60" width="140" height="68" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="280" y="82" text-anchor="middle" fill="#a78bfa" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">If Condition</text>
+      <text x="280" y="100" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">new rows exist?</text>
+      <text x="280" y="116" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">modified_date > wm</text>
+      <line x1="350" y1="94" x2="410" y2="94" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#adf-arr)" opacity="0.7"/>
+      <rect x="410" y="52" width="170" height="84" rx="8" fill="#2a3a52" stroke="#10B981" stroke-width="1.5"/>
+      <text x="495" y="74" text-anchor="middle" fill="#10B981" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Copy Activity</text>
+      <text x="426" y="92" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">source: @item().schema</text>
+      <text x="426" y="108" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">table: @item().table</text>
+      <text x="426" y="122" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">cdc_col: @item().cdc_col</text>
+      <line x1="580" y1="94" x2="640" y2="94" stroke="#10B981" stroke-width="1.5" marker-end="url(#adf-green)" opacity="0.7"/>
+      <rect x="640" y="60" width="118" height="68" rx="8" fill="#1e293b" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="699" y="82" text-anchor="middle" fill="#E8E8F0" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="500">ADLS Gen2</text>
+      <text x="699" y="100" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">Parquet format</text>
+      <text x="699" y="116" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">partitioned output</text>
+      <rect x="410" y="168" width="348" height="22" rx="5" fill="#1e293b" stroke="#3b4a63" stroke-width="1"/>
+      <text x="584" y="183" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="8">UPDATE watermark SET last_load_time = @pipeline().TriggerTime WHERE table = @item().table</text>
+      <line x1="699" y1="128" x2="699" y2="152" stroke="#3b4a63" stroke-width="1" opacity="0.5"/>
+      <line x1="699" y1="152" x2="758" y2="152" stroke="#3b4a63" stroke-width="1" opacity="0.5"/>
+      <line x1="758" y1="152" x2="758" y2="179" stroke="#3b4a63" stroke-width="1" opacity="0.5"/>
+      <rect x="30" y="220" width="718" height="46" rx="8" fill="#1e293b" stroke="#3b4a63" stroke-width="1.5"/>
+      <text x="389" y="240" text-anchor="middle" fill="#94A3B8" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="500">Azure SQL Database (Source) — parameterized query</text>
+      <text x="389" y="258" text-anchor="middle" fill="#64748B" font-family="JetBrains Mono,monospace" font-size="9">SELECT * FROM @{item().schema}.@{item().table} WHERE @{item().cdc_col} > @{activity('Lookup1').output.firstRow.last_load_time}</text>
+    </svg>
+    <p class="diagram-caption">One pipeline template handles all source tables via parameterization. ForEach loop + watermark tracking means new source tables are added by updating the table_list JSON — no new pipeline code.</p>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-label">Why Medallion</div><div class="feat-title">Separation of concerns per layer</div><div class="feat-body">Bronze is append-only — provides a full raw audit trail, never overwritten. Silver is the transform layer — type casting, null handling, regex cleaning, multi-source joins. Gold is aggregated for business users — one table per KPI, no transforms needed at query time.</div></div>
+    <div class="feat-card"><div class="feat-label">Why CDC</div><div class="feat-title">Only load what changed</div><div class="feat-body">Full table scans are expensive at scale. The watermark approach queries only rows where the CDC column (modified_date, updated_at, etc.) is newer than the last successful load. Idempotent — if a run fails, re-running picks up from the last successful watermark.</div></div>
+    <div class="feat-card"><div class="feat-label">Why Parameterize</div><div class="feat-title">One pipeline, N tables</div><div class="feat-body">Hard-coding one ADF pipeline per source table means N pipelines to maintain and N places to update when the schema changes. The parameterized template accepts schema, table, and CDC column at runtime — adding a new source is a JSON entry, not a new pipeline.</div></div>
+    <div class="feat-card"><div class="feat-label">Delta Lake</div><div class="feat-title">ACID transactions on ADLS Gen2</div><div class="feat-body">Delta Lake adds transaction logs on top of Parquet files on ADLS Gen2. Silver layer writes use .mode("overwrite") with Delta — schema enforcement, time travel, and ACID guarantees. Databricks reads the transaction log for consistent reads during concurrent writes.</div></div>
+  </div>
+  <div class="callout">
+    <p><strong>The key design insight on both pipelines:</strong> the Medallion ETL is about layered quality — each layer adds confidence in the data. The CDC pipeline is about efficiency — only process what changed. Together they represent the two most common patterns in modern data engineering: transform-on-ingest (Medallion) and incremental-load (CDC).</p>
+  </div>
+</div>`
+
+}; // end cases
+
+// ── Per-project themes ────────────────────────────────────────────────────────
+const themes = {
+  multiagent: {
+    '--bg':'#0f172a','--surface':'#1e293b','--surface2':'#2a3a52',
+    '--border':'#3b4a63','--accent':'#2a9d8f','--accent-dim':'rgba(42,157,143,0.13)',
+    '--accent-glow':'rgba(42,157,143,0.35)','--text':'#E8E8F0',
+    '--text-muted':'#64748B','--text-dim':'#94A3B8'
+  },
+  social: {
+    '--bg':'#0A0A0A','--surface':'#141414','--surface2':'#1E1E1E',
+    '--border':'#282828','--accent':'#22C55E','--accent-dim':'rgba(34,197,94,0.12)',
+    '--accent-glow':'rgba(34,197,94,0.30)','--text':'#EBEBEB',
+    '--text-muted':'#555555','--text-dim':'#888888'
+  },
+  ecommerce: {
+    '--bg':'#FAFAF8','--surface':'#FFFFFF','--surface2':'#F0EDEA',
+    '--border':'#E0DDD8','--accent':'#C44B6B','--accent-dim':'rgba(196,75,107,0.10)',
+    '--accent-glow':'rgba(196,75,107,0.25)','--text':'#1A1A1A',
+    '--text-muted':'#888680','--text-dim':'#4A4744'
+  },
+  skateboard: {
+    '--bg':'#F2EFE7','--surface':'#FAFAF6','--surface2':'#E8E5DC',
+    '--border':'#D8D5CC','--accent':'#E85B1A','--accent-dim':'rgba(232,91,26,0.10)',
+    '--accent-glow':'rgba(232,91,26,0.25)','--text':'#1A1814',
+    '--text-muted':'#8A8680','--text-dim':'#4A4640'
+  },
+  azure: {
+    '--bg':'#0D1B2A','--surface':'#152235','--surface2':'#1C2F44',
+    '--border':'#253A52','--accent':'#E74C3C','--accent-dim':'rgba(231,76,60,0.12)',
+    '--accent-glow':'rgba(231,76,60,0.30)','--text':'#E8EEF4',
+    '--text-muted':'#5A7080','--text-dim':'#8A9FAA'
+  }
+};
+
+// ── Open/close logic ─────────────────────────────────────────────────────────
+function openCase(id) {
+  const overlay = document.getElementById('overlay');
+  const content = document.getElementById('overlay-content');
+
+  // Apply per-project theme by setting CSS vars on the overlay element
+  const theme = themes[id] || themes.multiagent;
+  Object.entries(theme).forEach(([k, v]) => overlay.style.setProperty(k, v));
+
+  content.innerHTML = cases[id] || '<p style="color:var(--text-muted);padding:80px 0">Coming soon.</p>';
+  overlay.classList.add('open');
+  overlay.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => {
+    content.querySelectorAll('.reveal').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 80);
+    });
+  }, 50);
+}
+
+// ── Accordion toggle ─────────────────────────────────────────────────────────
+function toggleAcc(id) {
+  const el = document.getElementById('pacc-' + id);
+  const isOpen = el.classList.contains('open');
+  // close all + pause their videos
+  document.querySelectorAll('.pacc.open').forEach(p => {
+    p.classList.remove('open');
+    const pv = p.querySelector('.pacc-video');
+    if (pv) pv.pause();
+  });
+  // open this one if it was closed + play its video
+  if (!isOpen) {
+    el.classList.add('open');
+    const v = el.querySelector('.pacc-video');
+    if (v) { try { v.currentTime = 0; } catch(e){} v.play().catch(()=>{}); }
+  }
+}
+
+function closeCase() {
+  const overlay = document.getElementById('overlay');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  // Clear theme vars after fade-out completes
+  setTimeout(() => overlay.removeAttribute('style'), 350);
+}
+
+// close on Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCase(); });
+
+// ── Scroll-spy nav + one-time section reveal ──────────────────────────────────
+(function () {
+  // active nav link as sections cross the viewport midline
+  const navMap = {};
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    if (id && document.getElementById(id)) navMap[id] = a;
+  });
+  const spied = Object.keys(navMap).map(id => document.getElementById(id));
+  if (spied.length) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          Object.values(navMap).forEach(a => a.classList.remove('active'));
+          navMap[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-42% 0px -55% 0px', threshold: 0 });
+    spied.forEach(s => spy.observe(s));
+  }
+
+  // reveal sections on first scroll-in
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reveals = document.querySelectorAll('.sect-reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveals.forEach(el => el.classList.add('in'));
+  } else {
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(el => ro.observe(el));
+  }
+})();
+
+// ── Interactive layer: progress bar, cursor spotlights, magnetic buttons ──────
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // scroll progress (always on)
+  const bar = document.getElementById('progress');
+  if (bar) {
+    const onScroll = () => {
+      const d = document.documentElement;
+      const max = d.scrollHeight - d.clientHeight;
+      bar.style.transform = 'scaleX(' + (max > 0 ? d.scrollTop / max : 0) + ')';
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
+  }
+
+  if (reduce) return; // honor reduced-motion: skip cursor/magnetic effects
+
+  // hero dot-grid spotlight
+  const hero = document.getElementById('hero');
+  if (hero) {
+    hero.addEventListener('pointermove', e => {
+      const r = hero.getBoundingClientRect();
+      hero.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      hero.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      hero.classList.add('spot-on');
+    });
+    hero.addEventListener('pointerleave', () => hero.classList.remove('spot-on'));
+  }
+
+  // per-project row cursor glow (uses each project's accent)
+  document.querySelectorAll('.pacc-row').forEach(row => {
+    row.addEventListener('pointermove', e => {
+      const r = row.getBoundingClientRect();
+      row.style.setProperty('--rx', (e.clientX - r.left) + 'px');
+      row.style.setProperty('--ry', (e.clientY - r.top) + 'px');
+    });
+  });
+
+  // magnetic buttons
+  document.querySelectorAll('.magnetic').forEach(btn => {
+    const S = 0.3;
+    btn.addEventListener('pointermove', e => {
+      const r = btn.getBoundingClientRect();
+      const mx = e.clientX - (r.left + r.width / 2);
+      const my = e.clientY - (r.top + r.height / 2);
+      btn.style.transform = 'translate(' + (mx * S).toFixed(1) + 'px,' + (my * S).toFixed(1) + 'px)';
+    });
+    btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
+  });
+})();
+
+/* ===== dossier re-skin: 3-mode toggle + HUD ===== */
+(function(){
+  var root=document.documentElement, tg=document.getElementById('themeToggle');
+  if(tg){tg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+    root.setAttribute('data-theme',b.getAttribute('data-mode'));
+    Array.prototype.forEach.call(tg.querySelectorAll('button'),function(x){x.classList.toggle('on',x===b);});});}
+  function tick(){var t=new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Kolkata',hour12:false});
+    var c=document.getElementById('hudClock'); if(c)c.textContent=t;}
+  tick(); setInterval(tick,1000);
+  var co=document.getElementById('hudCoords');
+  if(co)addEventListener('pointermove',function(e){
+    var x=((e.clientX/innerWidth)*2-1).toFixed(3), y=((e.clientY/innerHeight)*2-1).toFixed(3);
+    co.innerHTML='X '+(x>=0?'+':'')+x+' &nbsp; Y '+(y>=0?'+':'')+y;});
+})();
+</script>
+<div class="hud-bar"><div class="l"><span><span class="hud-dot"></span> BLR <span id="hudClock">--:--:--</span></span><span class="tick">SHIPPING: MULTI-AGENT · NOT: AI WRAPPERS</span></div><div id="hudCoords">X +0.000 &nbsp; Y +0.000</div></div>
+<script>
+/* ===== teal gravity-well hero — infinite ground plane (Canvas 2D, self-contained) ===== */
+(function(){
+  var cv=document.getElementById('space-bg'); if(!cv) return;
+  var ctx=cv.getContext('2d');
+  var DPR=Math.min(window.devicePixelRatio||1,2);
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W=0,H=0, horizonY=0, FOCAL=0, CX=0;
+  /* camera / plane (grazing angle + horizon = infinite feel) */
+  var horizonF=0.33, FOCALf=0.95, camH=2.0, zNear=3.0, zFar=85, X=66, DX=1.5, ZLINES=24, XSAMP=52;
+  /* gravity well (shallow, localised) */
+  var DW=10.5, WX=3.8, WZ=3.4, SINK=0.95;
+  var planets=[], stars=[];
+  var BG=[15,23,42];   /* parsed --bg, refreshed on theme change */
+  function readBG(){
+    var v=getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+    var m=/^#?([0-9a-f]{6})$/i.exec(v);
+    if(m){ var n=parseInt(m[1],16); BG=[(n>>16)&255,(n>>8)&255,n&255]; }
+  }
+  function bgS(a){ return 'rgba('+BG[0]+','+BG[1]+','+BG[2]+','+a+')'; }
+  function sink(x,z,t){
+    var d2=(x*x)/(2*WX*WX)+((z-DW)*(z-DW))/(2*WZ*WZ);
+    var s=SINK*Math.exp(-d2);
+    if(!reduce) s+=0.05*Math.sin(z*0.5-t*0.0007)+0.04*Math.sin(x*0.4+t*0.0005);
+    return s;
+  }
+  function gx(x,z){ return CX+FOCAL*x/z; }
+  function gy(x,z,t){ return horizonY+FOCAL*(camH+sink(x,z,t))/z; }
+  function setup(){ horizonY=H*horizonF; FOCAL=H*FOCALf; CX=W/2; }
+  function makePlanets(){ planets=[]; for(var k=0;k<7;k++) planets.push({
+    x:(Math.random()*2-1)*26, h:0.6+Math.random()*3.4, z:5+Math.random()*34,
+    r:0.5+Math.random()*1.4, vx:(Math.random()*2-1)*0.006, vz:(Math.random()*2-1)*0.004,
+    g:0.5+Math.random()*0.4 }); }
+  function makeStars(){ stars=[]; var n=Math.min(150,Math.round((W*H)/16000));
+    for(var k=0;k<n;k++) stars.push({x:Math.random()*W,y:Math.random()*H*0.7,r:Math.random()*1.1+0.2,tw:Math.random()*6.28,sp:0.5+Math.random()}); }
+  function resize(){
+    W=document.documentElement.clientWidth; H=window.innerHeight;
+    cv.style.width=W+'px'; cv.style.height=H+'px';
+    cv.width=Math.round(W*DPR); cv.height=Math.round(H*DPR);
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    setup(); makeStars(); if(reduce) draw(0);
+  }
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    /* starfield (upper field) */
+    for(var s=0;s<stars.length;s++){ var st=stars[s];
+      var a=reduce?0.4:0.28+0.32*Math.sin(t*0.001*st.sp+st.tw);
+      ctx.globalAlpha=a*0.5; ctx.fillStyle=(s%8===0)?'rgba(42,157,143,1)':'rgba(205,218,228,1)';
+      ctx.beginPath(); ctx.arc(st.x,st.y,st.r,0,6.283); ctx.fill(); }
+    ctx.globalAlpha=1;
+    /* ---- grid (batched polylines) ---- */
+    ctx.lineWidth=1; ctx.strokeStyle='rgba(42,157,143,0.46)';
+    var invN=1/zNear, invF=1/zFar;
+    /* lines of constant x (recede to horizon) */
+    for(var x=-X;x<=X;x+=DX){
+      ctx.beginPath(); var first=true;
+      for(var k=0;k<=XSAMP;k++){ var z=1/(invN+(k/XSAMP)*(invF-invN));
+        var Xs=gx(x,z), Ys=gy(x,z,t);
+        if(first){ctx.moveTo(Xs,Ys);first=false;} else ctx.lineTo(Xs,Ys); }
+      ctx.stroke();
+    }
+    /* lines of constant z (evenly spaced on screen via 1/z) */
+    for(var zi=0;zi<=ZLINES;zi++){ var z2=1/(invN+(zi/ZLINES)*(invF-invN));
+      ctx.beginPath(); var f2=true;
+      for(var x2=-X;x2<=X;x2+=1.5){ var Xa=gx(x2,z2), Ya=gy(x2,z2,t);
+        if(f2){ctx.moveTo(Xa,Ya);f2=false;} else ctx.lineTo(Xa,Ya); }
+      ctx.stroke();
+    }
+    /* ---- fade masks (blend grid into bg: horizon + edges = infinite, no hard boundary) ---- */
+    var topH=horizonY+H*0.17;
+    var gt=ctx.createLinearGradient(0,0,0,topH);
+    gt.addColorStop(0,bgS(1)); gt.addColorStop(0.72,bgS(1)); gt.addColorStop(1,bgS(0));
+    ctx.fillStyle=gt; ctx.fillRect(0,0,W,topH);
+    var ew=W*0.26;
+    var gl=ctx.createLinearGradient(0,0,ew,0); gl.addColorStop(0,bgS(1)); gl.addColorStop(1,bgS(0));
+    ctx.fillStyle=gl; ctx.fillRect(0,0,ew,H);
+    var grd=ctx.createLinearGradient(W,0,W-ew,0); grd.addColorStop(0,bgS(1)); grd.addColorStop(1,bgS(0));
+    ctx.fillStyle=grd; ctx.fillRect(W-ew,0,ew,H);
+    var gb=ctx.createLinearGradient(0,H,0,H*0.8); gb.addColorStop(0,bgS(0.65)); gb.addColorStop(1,bgS(0));
+    ctx.fillStyle=gb; ctx.fillRect(0,H*0.8,W,H*0.2);
+    /* ---- star at the bottom of the well ---- */
+    var sx=gx(0,DW), sy=gy(0,DW,t);
+    var pulse=reduce?1:(1+0.07*Math.sin(t*0.002)); var R=Math.min(W,H)*0.05*pulse;
+    ctx.save(); ctx.globalCompositeOperation='lighter';
+    var halo=ctx.createRadialGradient(sx,sy,0,sx,sy,R*4.2);
+    halo.addColorStop(0,'rgba(150,235,222,0.85)'); halo.addColorStop(0.18,'rgba(42,157,143,0.5)');
+    halo.addColorStop(0.5,'rgba(42,157,143,0.12)'); halo.addColorStop(1,'rgba(42,157,143,0)');
+    ctx.fillStyle=halo; ctx.beginPath(); ctx.arc(sx,sy,R*4.2,0,6.283); ctx.fill();
+    var core=ctx.createRadialGradient(sx,sy,0,sx,sy,R);
+    core.addColorStop(0,'rgba(255,255,255,1)'); core.addColorStop(0.4,'rgba(150,235,222,0.95)'); core.addColorStop(1,'rgba(42,157,143,0)');
+    ctx.fillStyle=core; ctx.beginPath(); ctx.arc(sx,sy,R,0,6.283); ctx.fill(); ctx.restore();
+    /* ---- planets (float above the plane, depth-sorted) ---- */
+    var pr=[]; for(var p=0;p<planets.length;p++){ var pl=planets[p];
+      if(!reduce){ pl.x+=pl.vx; pl.z+=pl.vz; if(pl.z<4)pl.z=40; if(pl.z>40)pl.z=4; if(pl.x>30)pl.x=-30; if(pl.x<-30)pl.x=30; }
+      var zz=pl.z<0.5?0.5:pl.z;
+      pr.push({x:CX+FOCAL*pl.x/zz, y:horizonY+FOCAL*(camH-pl.h)/zz, s:FOCAL/zz, pl:pl, z:zz}); }
+    pr.sort(function(a,b){return b.z-a.z;});
+    for(var m=0;m<pr.length;m++){ var P=pr[m]; var rad=P.pl.r*P.s/FOCAL*40; if(rad<1.2)continue;
+      var gv=Math.round(120*P.pl.g+60);
+      ctx.save(); ctx.globalAlpha=P.z>26?0.45:0.85;
+      var bg=ctx.createRadialGradient(P.x-rad*0.3,P.y-rad*0.3,rad*0.1,P.x,P.y,rad);
+      bg.addColorStop(0,'rgba('+(gv+50)+','+(gv+55)+','+(gv+65)+',0.95)'); bg.addColorStop(1,'rgba('+(gv-20)+','+(gv-15)+','+(gv-5)+',0)');
+      ctx.fillStyle=bg; ctx.beginPath(); ctx.arc(P.x,P.y,rad,0,6.283); ctx.fill();
+      ctx.globalCompositeOperation='lighter';
+      var rim=ctx.createRadialGradient(P.x+rad*0.4,P.y+rad*0.4,rad*0.2,P.x,P.y,rad*1.1);
+      rim.addColorStop(0,'rgba(42,157,143,0)'); rim.addColorStop(0.8,'rgba(42,157,143,0.10)'); rim.addColorStop(1,'rgba(42,157,143,0)');
+      ctx.fillStyle=rim; ctx.beginPath(); ctx.arc(P.x,P.y,rad*1.1,0,6.283); ctx.fill(); ctx.restore(); }
+  }
+  var raf=null,running=false;
+  function loop(t){ draw(t); raf=requestAnimationFrame(loop); }
+  function start(){ if(running||reduce)return; running=true; raf=requestAnimationFrame(loop); }
+  function stop(){ running=false; if(raf)cancelAnimationFrame(raf); raf=null; }
+  readBG();
+  if('MutationObserver'in window) new MutationObserver(function(){readBG();}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  makePlanets(); window.addEventListener('resize',resize);
+  if(window.visualViewport) window.visualViewport.addEventListener('resize',resize);
+  resize();
+  if(reduce){ draw(0); }
+  else { var hero=document.getElementById('hero');
+    if('IntersectionObserver'in window && hero){ new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?start():stop();});},{threshold:0}).observe(hero); }
+    else start(); }
+})();
+</script>
+</body>
+</html>
